@@ -48,12 +48,12 @@ ART_H = ROWS * CELL_H
 CANVAS_W = ART_W + PAD * 2
 CANVAS_H = TITLEBAR_H + ART_H + STATUS_H + PAD
 
-BG = "#0d1117"
-BG2 = "#111722"
-FRAME = "#30363d"
-TITLE_TEXT = "#7d8590"
-INK = "#c9d1d9"      # the single ascii color (matches Andrew6rant)
-CURSOR = "#c9d1d9"
+BG = "#0b1214"
+BG2 = "#111b1e"
+FRAME = "#1c2b2f"
+TITLE_TEXT = "#6f8a88"
+INK = "#d7ece8"
+CURSOR = "#d7ece8"
 
 # ---- reveal timing (one-shot; a cursor rasters top -> bottom) -------------
 ROW_DUR = 5.8 / ROWS  # whole portrait prints in ~6s at any resolution
@@ -94,8 +94,9 @@ parts.append(
     f'Menlo, Consolas, monospace">'
 )
 parts.append('<defs>'
-             f'<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">'
-             f'<stop offset="0" stop-color="{BG2}"/><stop offset="1" stop-color="{BG}"/>'
+             f'<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
+             f'<stop offset="0" stop-color="{BG}"/><stop offset="0.6" stop-color="{BG2}"/>'
+             f'<stop offset="1" stop-color="#0f2420"/>'
              f'</linearGradient></defs>')
 
 parts.append(f'<rect width="{CANVAS_W}" height="{CANVAS_H}" rx="12" fill="url(#bg)"/>')
@@ -103,7 +104,7 @@ parts.append(f'<rect x="0.5" y="0.5" width="{CANVAS_W-1}" height="{CANVAS_H-1}" 
              f'fill="none" stroke="{FRAME}" stroke-width="1"/>')
 
 parts.append(f'<line x1="0" y1="{TITLEBAR_H}" x2="{CANVAS_W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>')
-for i, dotcol in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
+for i, dotcol in enumerate(["#ff5f57", "#febc2e", "#2ebfa5"]):
     parts.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dotcol}"/>')
 parts.append(f'<text x="{CANVAS_W/2}" y="{TITLEBAR_H/2 + 4}" fill="{TITLE_TEXT}" font-size="12" '
              f'text-anchor="middle">vulneze@github: ~$ ./portrait.sh</text>')

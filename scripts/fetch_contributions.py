@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-"""
-Scrape real daily contribution counts from GitHub's public, unauthenticated
-contributions endpoint (the same fragment the profile page itself uses) and
-write data/contributions.json with the raw days plus derived stats
-(current streak, longest streak, best day, monthly totals).
+"""Récupère le calendrier de contributions public de GitHub, sans token ni API.
 
-No token, no auth, no GraphQL -- just the public HTML GitHub already serves.
-Run daily by .github/workflows/update-profile-art.yml.
+GitHub sert ce fragment HTML à l'adresse https://github.com/users/<user>/contributions
+(le même que celui utilisé par la page de profil). On le parse avec BeautifulSoup
+et on écrit data/contributions.json : jours bruts + stats dérivées.
+
+Usage : python scripts/fetch_contributions.py [utilisateur]
 """
-import datetime
+import datetime as dt
 import json
 import os
 import re
@@ -17,107 +16,99 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-USERNAME = os.environ.get("GH_PROFILE_USER", "VulneZe")
-URL = f"https://github.com/users/{USERNAME}/contributions"
-OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "contributions.json")
+USER = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("GH_USER", "vulneze")
+OUT = os.path.join("data", "contributions.json")
+URL = f"https://github.com/users/{USER}/contributions"
 
 
-def fetch_days():
-    resp = requests.get(URL, headers={"User-Agent": "profile-readme-bot/1.0"}, timeout=30)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+def fetch_html():
+    r = requests.get(URL, timeout=30, headers={"User-Agent": "profile-art/1.0"})
+    r.raise_for_status()
+    return r.text
 
-    cells = soup.select("td.ContributionCalendar-day")
-    if not cells:
-        print("no calendar cells found -- github markup may have changed", file=sys.stderr)
-        sys.exit(1)
+
+def parse(html):
+    soup = BeautifulSoup(html, "html.parser")
+    tips = {}
+    for t in soup.find_all("tool-tip"):
+        m = re.match(r"\s*(No|\d[\d,]*)\s+contribution", t.get_text())
+        if m and t.get("for"):
+            tips[t["for"]] = 0 if m.group(1) == "No" else int(m.group(1).replace(",", ""))
 
     days = []
-    for td in cells:
-        date = td.get("data-date")
-        if not date:
-            continue
-        td_id = td.get("id")
-        tooltip_el = soup.find("tool-tip", attrs={"for": td_id}) if td_id else None
-        text = tooltip_el.get_text(strip=True) if tooltip_el else ""
-        if re.search(r"no contributions", text, re.I):
-            count = 0
-        else:
-            m = re.match(r"(\d+)", text)
-            count = int(m.group(1)) if m else 0
-        days.append({"date": date, "count": count, "level": int(td.get("data-level") or 0)})
-
+    for td in soup.select("td.ContributionCalendar-day[data-date]"):
+        count = tips.get(td.get("id"), None)
+        level = int(td.get("data-level", 0))
+        if count is None:
+            # Pas d'infobulle : on retombe sur le niveau pour ne rien perdre
+            count = 0 if level == 0 else level
+        days.append({"date": td["data-date"], "count": count, "level": level})
     days.sort(key=lambda d: d["date"])
     return days
 
 
-def compute_current_streak(days):
-    idx = len(days) - 1
-    if days[idx]["count"] == 0:
-        idx -= 1  # today isn't over yet -- don't break the streak on it
-    streak = 0
-    end_idx = idx
-    while idx >= 0 and days[idx]["count"] > 0:
-        streak += 1
-        idx -= 1
-    start_idx = idx + 1
-    if streak == 0:
-        return 0, None, None
-    return streak, days[start_idx]["date"], days[end_idx]["date"]
-
-
-def compute_longest_streak(days):
-    longest = run = 0
-    longest_start = longest_end = None
-    run_start_idx = None
-    for i, d in enumerate(days):
-        if d["count"] > 0:
-            if run == 0:
-                run_start_idx = i
-            run += 1
-            if run > longest:
-                longest = run
-                longest_start = days[run_start_idx]["date"]
-                longest_end = days[i]["date"]
-        else:
-            run = 0
-    return longest, longest_start, longest_end
-
-
-def build_data(days):
+def stats(days):
     total = sum(d["count"] for d in days)
-    active_days = sum(1 for d in days if d["count"] > 0)
-    best = max(days, key=lambda d: d["count"])
-    cur_len, cur_start, cur_end = compute_current_streak(days)
-    long_len, long_start, long_end = compute_longest_streak(days)
+    best = max(days, key=lambda d: d["count"]) if days else {"date": None, "count": 0}
 
-    monthly = {}
+    longest = run = 0
+    for d in days:
+        run = run + 1 if d["count"] > 0 else 0
+        longest = max(longest, run)
+
+    # série en cours : on tolère que "aujourd'hui" soit encore vide
+    current = 0
+    seq = list(days)
+    if seq and seq[-1]["count"] == 0:
+        seq = seq[:-1]
+    for d in reversed(seq):
+        if d["count"] > 0:
+            current += 1
+        else:
+            break
+
+    months = {}
     for d in days:
         key = d["date"][:7]
-        monthly[key] = monthly.get(key, 0) + d["count"]
-    monthly_list = [{"month": k, "total": v} for k, v in sorted(monthly.items())]
+        months[key] = months.get(key, 0) + d["count"]
 
     return {
-        "username": USERNAME,
-        "generated_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "range": {"start": days[0]["date"], "end": days[-1]["date"]},
-        "total_contributions": total,
-        "active_days": active_days,
-        "avg_per_active_day": round(total / active_days, 1) if active_days else 0,
-        "current_streak": {"length": cur_len, "start": cur_start, "end": cur_end},
-        "longest_streak": {"length": long_len, "start": long_start, "end": long_end},
+        "total": total,
+        "current_streak": current,
+        "longest_streak": longest,
         "best_day": {"date": best["date"], "count": best["count"]},
-        "monthly": monthly_list,
-        "days": days,
+        "months": months,
     }
 
 
+def main():
+    os.makedirs("data", exist_ok=True)
+    try:
+        days = parse(fetch_html())
+        if not days:
+            raise RuntimeError("calendrier introuvable dans la réponse")
+        source = "github"
+    except Exception as exc:  # hors-ligne, profil vide ou HTML modifié
+        print(f"[warn] récupération impossible ({exc}) — calendrier vide généré", file=sys.stderr)
+        end = dt.date.today()
+        start = end - dt.timedelta(days=364)
+        days = [
+            {"date": (start + dt.timedelta(days=i)).isoformat(), "count": 0, "level": 0}
+            for i in range(365)
+        ]
+        source = "empty"
+
+    payload = {
+        "user": USER,
+        "source": source,
+        "generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "days": days,
+        "stats": stats(days),
+    }
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=1)
+    print(f"OK -> {OUT} ({len(days)} jours, {payload['stats']['total']} contributions, source={source})")
+
+
 if __name__ == "__main__":
-    days = fetch_days()
-    data = build_data(days)
-    os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-    with open(OUT_PATH, "w") as f:
-        json.dump(data, f, indent=2)
-    print(f"wrote {OUT_PATH}: {data['total_contributions']} contributions, "
-          f"current streak {data['current_streak']['length']}, "
-          f"longest streak {data['longest_streak']['length']}")
+    main()
