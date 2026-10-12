@@ -1,0 +1,10 @@
+# needed by the daily workflow (fetch_contributions.py)
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# local only: portrait pipeline (prep_photo.py / make_ascii_svg.py) + previews
+Pillow==12.1.1
+numpy==1.26.4
+# opencv-python-headless   # prep_photo.py
+# rembg                    # prep_photo.py, only if source photo has no alpha
+# cairosvg                 # optional: rasterize SVGs for local preview
