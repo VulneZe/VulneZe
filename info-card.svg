@@ -1,64 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="490" height="550" viewBox="0 0 490 550" role="img" aria-label="Carte d'information de Baptiste Rouault (vulneze)">
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="482" viewBox="0 0 460 482" role="img" aria-label="Carte de profil de Baptiste Rouault : rôle, périmètre, réalisations">
 <style>.l{opacity:0;animation:in .45s ease-out forwards}@keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}</style>
-<rect x="0.5" y="0.5" width="489" height="549" rx="12" fill="#0b1214" stroke="#1c2b2f"/>
-<path d="M0.5 12.5a12 12 0 0 1 12-12h465a12 12 0 0 1 12 12V34H0.5z" fill="#111b1e"/>
-<line x1="0.5" y1="34" x2="489.5" y2="34" stroke="#1c2b2f"/>
+<rect x="0.5" y="0.5" width="459" height="481" rx="12" fill="#0b1214" stroke="#1c2b2f"/>
+<path d="M0.5 12.5a12 12 0 0 1 12-12h435a12 12 0 0 1 12 12V34H0.5z" fill="#111b1e"/>
+<line x1="0.5" y1="34" x2="459.5" y2="34" stroke="#1c2b2f"/>
 <circle cx="20" cy="17.5" r="5" fill="#ff5f57"/><circle cx="38" cy="17.5" r="5" fill="#febc2e"/><circle cx="56" cy="17.5" r="5" fill="#2ebfa5"/>
-<text x="245" y="21" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" fill="#6f8a88">neofetch</text>
+<text x="230" y="21" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#6f8a88">neofetch</text>
 <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="12.5" xml:space="preserve">
-<text x="24" y="66" class="l" style="animation-delay:0.30s" font-size="14.5" font-weight="700"><tspan fill="#2ebfa5">vulneze</tspan><tspan fill="#6f8a88">@</tspan><tspan fill="#2ebfa5">github</tspan></text>
-<text x="24" y="84.0" class="l" style="animation-delay:0.41s" fill="#6f8a88">────────────────────────────────────────</text>
-<text x="24" y="103.8" class="l" style="animation-delay:0.52s"><tspan fill="#2ebfa5" font-weight="700">Nom</tspan></text>
-<text x="136.5" y="103.8" class="l" style="animation-delay:0.52s" fill="#d7ece8">Baptiste Rouault</text>
-<text x="24" y="121.8" class="l" style="animation-delay:0.63s"><tspan fill="#2ebfa5" font-weight="700">Rôle</tspan></text>
-<text x="136.5" y="121.8" class="l" style="animation-delay:0.63s" fill="#d7ece8">RSSI adjoint · Architecte réseaux &amp;</text>
-<text x="24" y="139.8" class="l" style="animation-delay:0.74s"></text>
-<text x="136.5" y="139.8" class="l" style="animation-delay:0.74s" fill="#d7ece8">cybersécurité</text>
-<text x="24" y="157.8" class="l" style="animation-delay:0.85s"><tspan fill="#2ebfa5" font-weight="700">Maintenant</tspan></text>
-<text x="136.5" y="157.8" class="l" style="animation-delay:0.85s" fill="#d7ece8">SMSI, conformité NIS2 / ISO 27001, XDR-EDR-</text>
-<text x="24" y="175.8" class="l" style="animation-delay:0.96s"></text>
-<text x="136.5" y="175.8" class="l" style="animation-delay:0.96s" fill="#d7ece8">SIEM on-premise (depuis fév. 2026)</text>
-<text x="24" y="193.8" class="l" style="animation-delay:1.07s"><tspan fill="#2ebfa5" font-weight="700">Avant</tspan></text>
-<text x="136.5" y="193.8" class="l" style="animation-delay:1.07s" fill="#d7ece8">Logisseo (2024-25) · LACROIX (2022-24) · SOC</text>
-<text x="24" y="211.8" class="l" style="animation-delay:1.18s"></text>
-<text x="136.5" y="211.8" class="l" style="animation-delay:1.18s" fill="#d7ece8">N1 Cooperl</text>
-<text x="24" y="229.8" class="l" style="animation-delay:1.29s"><tspan fill="#2ebfa5" font-weight="700">Défense</tspan></text>
-<text x="136.5" y="229.8" class="l" style="animation-delay:1.29s" fill="#d7ece8">Wazuh · Bitdefender · Tehtris · Sentinel ·</text>
-<text x="24" y="247.8" class="l" style="animation-delay:1.40s"></text>
-<text x="136.5" y="247.8" class="l" style="animation-delay:1.40s" fill="#d7ece8">Defender · SIEM / XDR</text>
-<text x="24" y="265.8" class="l" style="animation-delay:1.51s"><tspan fill="#2ebfa5" font-weight="700">Réseau</tspan></text>
-<text x="136.5" y="265.8" class="l" style="animation-delay:1.51s" fill="#d7ece8">Fortinet · pfSense · VLAN / VPN · ZTNA ·</text>
-<text x="24" y="283.8" class="l" style="animation-delay:1.62s"></text>
-<text x="136.5" y="283.8" class="l" style="animation-delay:1.62s" fill="#d7ece8">micro-segmentation</text>
-<text x="24" y="301.8" class="l" style="animation-delay:1.73s"><tspan fill="#2ebfa5" font-weight="700">Identité</tspan></text>
-<text x="136.5" y="301.8" class="l" style="animation-delay:1.73s" fill="#d7ece8">AD / GPO · IAM · MFA · PAM · RADIUS · PKI /</text>
-<text x="24" y="319.8" class="l" style="animation-delay:1.84s"></text>
-<text x="136.5" y="319.8" class="l" style="animation-delay:1.84s" fill="#d7ece8">Yubikey</text>
-<text x="24" y="337.8" class="l" style="animation-delay:1.95s"><tspan fill="#2ebfa5" font-weight="700">Infra</tspan></text>
-<text x="136.5" y="337.8" class="l" style="animation-delay:1.95s" fill="#d7ece8">Proxmox · VMware · Hyper-V · Azure &amp; M365 ·</text>
-<text x="24" y="355.8" class="l" style="animation-delay:2.06s"></text>
-<text x="136.5" y="355.8" class="l" style="animation-delay:2.06s" fill="#d7ece8">AWS · Kubernetes</text>
-<text x="24" y="373.8" class="l" style="animation-delay:2.17s"><tspan fill="#2ebfa5" font-weight="700">Automatisation</tspan></text>
-<text x="136.5" y="373.8" class="l" style="animation-delay:2.17s" fill="#d7ece8">Ansible · Jenkins · Docker · Gitea ·</text>
-<text x="24" y="391.8" class="l" style="animation-delay:2.28s"></text>
-<text x="136.5" y="391.8" class="l" style="animation-delay:2.28s" fill="#d7ece8">PowerShell · Bash</text>
-<text x="24" y="409.8" class="l" style="animation-delay:2.39s"><tspan fill="#2ebfa5" font-weight="700">Certifs</tspan></text>
-<text x="136.5" y="409.8" class="l" style="animation-delay:2.39s" fill="#d7ece8">CEH (EC-Council) · AIS · Cisco Netacad</text>
-<text x="24" y="427.8" class="l" style="animation-delay:2.50s"></text>
-<text x="136.5" y="427.8" class="l" style="animation-delay:2.50s" fill="#d7ece8">Cybermenaces</text>
-<text x="24" y="445.8" class="l" style="animation-delay:2.61s"><tspan fill="#2ebfa5" font-weight="700">Formation</tspan></text>
-<text x="136.5" y="445.8" class="l" style="animation-delay:2.61s" fill="#d7ece8">Master SI &amp; Cybersécurité (Diginamic-ANSSI)</text>
-<text x="24" y="463.8" class="l" style="animation-delay:2.72s"></text>
-<text x="136.5" y="463.8" class="l" style="animation-delay:2.72s" fill="#d7ece8">· ESAIP · BTS SIO</text>
-<text x="24" y="481.8" class="l" style="animation-delay:2.83s"><tspan fill="#2ebfa5" font-weight="700">Dispo</tspan></text>
-<text x="136.5" y="481.8" class="l" style="animation-delay:2.83s" fill="#d7ece8">à partir de septembre 2027</text>
-<rect x="24" y="510.6" width="22" height="12" rx="3" fill="#1c2b2f" class="l" style="animation-delay:2.94s"/>
-<rect x="50" y="510.6" width="22" height="12" rx="3" fill="#14705f" class="l" style="animation-delay:2.99s"/>
-<rect x="76" y="510.6" width="22" height="12" rx="3" fill="#2ebfa5" class="l" style="animation-delay:3.04s"/>
-<rect x="102" y="510.6" width="22" height="12" rx="3" fill="#7be0cc" class="l" style="animation-delay:3.09s"/>
-<rect x="128" y="510.6" width="22" height="12" rx="3" fill="#d7ece8" class="l" style="animation-delay:3.14s"/>
-<rect x="154" y="510.6" width="22" height="12" rx="3" fill="#ff5f57" class="l" style="animation-delay:3.19s"/>
-<rect x="180" y="510.6" width="22" height="12" rx="3" fill="#febc2e" class="l" style="animation-delay:3.24s"/>
-<rect x="206" y="510.6" width="22" height="12" rx="3" fill="#6f8a88" class="l" style="animation-delay:3.29s"/>
+<text x="24" y="68" class="l" style="animation-delay:0.30s" font-size="15.5" font-weight="700"><tspan fill="#2ebfa5">vulneze</tspan><tspan fill="#6f8a88">@</tspan><tspan fill="#2ebfa5">github</tspan></text>
+<text x="24" y="86.0" class="l" style="animation-delay:0.42s" fill="#6f8a88">────────────────────────────────────</text>
+<text x="24" y="107.6" class="l" style="animation-delay:0.54s"><tspan fill="#2ebfa5" font-weight="700">Rôle</tspan></text>
+<text x="114.0" y="107.6" class="l" style="animation-delay:0.54s" fill="#d7ece8">RSSI adjoint · Architecte réseaux &amp;</text>
+<text x="24" y="125.6" class="l" style="animation-delay:0.66s"></text>
+<text x="114.0" y="125.6" class="l" style="animation-delay:0.66s" fill="#d7ece8">cybersécurité</text>
+<text x="24" y="148.6" class="l" style="animation-delay:0.78s"><tspan fill="#2ebfa5" font-weight="700">Focus</tspan></text>
+<text x="114.0" y="148.6" class="l" style="animation-delay:0.78s" fill="#d7ece8">Défense en profondeur · Zero Trust ·</text>
+<text x="24" y="166.6" class="l" style="animation-delay:0.90s"></text>
+<text x="114.0" y="166.6" class="l" style="animation-delay:0.90s" fill="#d7ece8">détection &amp; réponse</text>
+<text x="24" y="189.6" class="l" style="animation-delay:1.02s"><tspan fill="#2ebfa5" font-weight="700">En cours</tspan></text>
+<text x="114.0" y="189.6" class="l" style="animation-delay:1.02s" fill="#d7ece8">SMSI &amp; conformité NIS2 / ISO 27001 ·</text>
+<text x="24" y="207.6" class="l" style="animation-delay:1.14s"></text>
+<text x="114.0" y="207.6" class="l" style="animation-delay:1.14s" fill="#d7ece8">XDR-EDR-SIEM on-premise · architecture</text>
+<text x="24" y="225.6" class="l" style="animation-delay:1.26s"></text>
+<text x="114.0" y="225.6" class="l" style="animation-delay:1.26s" fill="#d7ece8">réseau</text>
+<text x="24" y="248.6" class="l" style="animation-delay:1.38s"><tspan fill="#2ebfa5" font-weight="700">Livré</tspan></text>
+<text x="114.0" y="248.6" class="l" style="animation-delay:1.38s" fill="#d7ece8">Déploiement Wazuh &amp; Bitdefender ·</text>
+<text x="24" y="266.6" class="l" style="animation-delay:1.50s"></text>
+<text x="114.0" y="266.6" class="l" style="animation-delay:1.50s" fill="#d7ece8">migration VPN → ZTNA ·</text>
+<text x="24" y="284.6" class="l" style="animation-delay:1.62s"></text>
+<text x="114.0" y="284.6" class="l" style="animation-delay:1.62s" fill="#d7ece8">micro-segmentation · durcissement</text>
+<text x="24" y="302.6" class="l" style="animation-delay:1.74s"></text>
+<text x="114.0" y="302.6" class="l" style="animation-delay:1.74s" fill="#d7ece8">Windows / Linux, AD, GPO</text>
+<text x="24" y="325.6" class="l" style="animation-delay:1.86s"><tspan fill="#2ebfa5" font-weight="700">Échelle</tspan></text>
+<text x="114.0" y="325.6" class="l" style="animation-delay:1.86s" fill="#d7ece8">parc de 600 utilisateurs</text>
+<text x="24" y="348.6" class="l" style="animation-delay:1.98s"><tspan fill="#2ebfa5" font-weight="700">Détection</tspan></text>
+<text x="114.0" y="348.6" class="l" style="animation-delay:1.98s" fill="#d7ece8">Wazuh · Bitdefender · Sentinel · Tehtris</text>
+<text x="24" y="371.6" class="l" style="animation-delay:2.10s"><tspan fill="#2ebfa5" font-weight="700">Périmètre</tspan></text>
+<text x="114.0" y="371.6" class="l" style="animation-delay:2.10s" fill="#d7ece8">Fortinet · pfSense · WAF · VLAN / VPN</text>
+<text x="24" y="394.6" class="l" style="animation-delay:2.22s"><tspan fill="#2ebfa5" font-weight="700">Automation</tspan></text>
+<text x="114.0" y="394.6" class="l" style="animation-delay:2.22s" fill="#d7ece8">Ansible · Jenkins · Docker · PowerShell</text>
+<text x="24" y="412.6" class="l" style="animation-delay:2.34s"></text>
+<text x="114.0" y="412.6" class="l" style="animation-delay:2.34s" fill="#d7ece8">· Bash</text>
+<rect x="24" y="440.6" width="22" height="12" rx="3" fill="#1c2b2f" class="l" style="animation-delay:2.46s"/>
+<rect x="50" y="440.6" width="22" height="12" rx="3" fill="#14705f" class="l" style="animation-delay:2.51s"/>
+<rect x="76" y="440.6" width="22" height="12" rx="3" fill="#2ebfa5" class="l" style="animation-delay:2.56s"/>
+<rect x="102" y="440.6" width="22" height="12" rx="3" fill="#7be0cc" class="l" style="animation-delay:2.61s"/>
+<rect x="128" y="440.6" width="22" height="12" rx="3" fill="#d7ece8" class="l" style="animation-delay:2.66s"/>
+<rect x="154" y="440.6" width="22" height="12" rx="3" fill="#ff5f57" class="l" style="animation-delay:2.71s"/>
+<rect x="180" y="440.6" width="22" height="12" rx="3" fill="#febc2e" class="l" style="animation-delay:2.76s"/>
+<rect x="206" y="440.6" width="22" height="12" rx="3" fill="#6f8a88" class="l" style="animation-delay:2.81s"/>
 </g>
 </svg>

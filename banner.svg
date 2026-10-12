@@ -1,0 +1,371 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="240" viewBox="0 0 860 240" role="img" aria-label="Baptiste Rouault — RSSI adjoint et architecte réseaux et cybersécurité">
+<style>.u{opacity:0;animation:up .7s cubic-bezier(.2,.8,.2,1) forwards}@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.caret{animation:blink 1s steps(1) infinite}</style>
+<defs><radialGradient id="g" cx="0.82" cy="0.5" r="0.55"><stop offset="0" stop-color="#2ebfa5" stop-opacity="0.20"/><stop offset="1" stop-color="#2ebfa5" stop-opacity="0"/></radialGradient><linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#2ebfa5"/><stop offset="1" stop-color="#7be0cc"/></linearGradient></defs>
+<rect x="0.5" y="0.5" width="859" height="239" rx="12" fill="#0b1214" stroke="#1c2b2f"/>
+<rect x="1" y="1" width="858" height="238" rx="11" fill="url(#g)"/>
+<g fill="#1c2b2f">
+<circle cx="20" cy="20" r="0.9"/>
+<circle cx="46" cy="20" r="0.9"/>
+<circle cx="72" cy="20" r="0.9"/>
+<circle cx="98" cy="20" r="0.9"/>
+<circle cx="124" cy="20" r="0.9"/>
+<circle cx="150" cy="20" r="0.9"/>
+<circle cx="176" cy="20" r="0.9"/>
+<circle cx="202" cy="20" r="0.9"/>
+<circle cx="228" cy="20" r="0.9"/>
+<circle cx="254" cy="20" r="0.9"/>
+<circle cx="280" cy="20" r="0.9"/>
+<circle cx="306" cy="20" r="0.9"/>
+<circle cx="332" cy="20" r="0.9"/>
+<circle cx="358" cy="20" r="0.9"/>
+<circle cx="384" cy="20" r="0.9"/>
+<circle cx="410" cy="20" r="0.9"/>
+<circle cx="436" cy="20" r="0.9"/>
+<circle cx="462" cy="20" r="0.9"/>
+<circle cx="488" cy="20" r="0.9"/>
+<circle cx="514" cy="20" r="0.9"/>
+<circle cx="540" cy="20" r="0.9"/>
+<circle cx="566" cy="20" r="0.9"/>
+<circle cx="592" cy="20" r="0.9"/>
+<circle cx="618" cy="20" r="0.9"/>
+<circle cx="644" cy="20" r="0.9"/>
+<circle cx="670" cy="20" r="0.9"/>
+<circle cx="696" cy="20" r="0.9"/>
+<circle cx="722" cy="20" r="0.9"/>
+<circle cx="748" cy="20" r="0.9"/>
+<circle cx="774" cy="20" r="0.9"/>
+<circle cx="800" cy="20" r="0.9"/>
+<circle cx="826" cy="20" r="0.9"/>
+<circle cx="852" cy="20" r="0.9"/>
+<circle cx="20" cy="46" r="0.9"/>
+<circle cx="46" cy="46" r="0.9"/>
+<circle cx="72" cy="46" r="0.9"/>
+<circle cx="98" cy="46" r="0.9"/>
+<circle cx="124" cy="46" r="0.9"/>
+<circle cx="150" cy="46" r="0.9"/>
+<circle cx="176" cy="46" r="0.9"/>
+<circle cx="202" cy="46" r="0.9"/>
+<circle cx="228" cy="46" r="0.9"/>
+<circle cx="254" cy="46" r="0.9"/>
+<circle cx="280" cy="46" r="0.9"/>
+<circle cx="306" cy="46" r="0.9"/>
+<circle cx="332" cy="46" r="0.9"/>
+<circle cx="358" cy="46" r="0.9"/>
+<circle cx="384" cy="46" r="0.9"/>
+<circle cx="410" cy="46" r="0.9"/>
+<circle cx="436" cy="46" r="0.9"/>
+<circle cx="462" cy="46" r="0.9"/>
+<circle cx="488" cy="46" r="0.9"/>
+<circle cx="514" cy="46" r="0.9"/>
+<circle cx="540" cy="46" r="0.9"/>
+<circle cx="566" cy="46" r="0.9"/>
+<circle cx="592" cy="46" r="0.9"/>
+<circle cx="618" cy="46" r="0.9"/>
+<circle cx="644" cy="46" r="0.9"/>
+<circle cx="670" cy="46" r="0.9"/>
+<circle cx="696" cy="46" r="0.9"/>
+<circle cx="722" cy="46" r="0.9"/>
+<circle cx="748" cy="46" r="0.9"/>
+<circle cx="774" cy="46" r="0.9"/>
+<circle cx="800" cy="46" r="0.9"/>
+<circle cx="826" cy="46" r="0.9"/>
+<circle cx="852" cy="46" r="0.9"/>
+<circle cx="20" cy="72" r="0.9"/>
+<circle cx="46" cy="72" r="0.9"/>
+<circle cx="72" cy="72" r="0.9"/>
+<circle cx="98" cy="72" r="0.9"/>
+<circle cx="124" cy="72" r="0.9"/>
+<circle cx="150" cy="72" r="0.9"/>
+<circle cx="176" cy="72" r="0.9"/>
+<circle cx="202" cy="72" r="0.9"/>
+<circle cx="228" cy="72" r="0.9"/>
+<circle cx="254" cy="72" r="0.9"/>
+<circle cx="280" cy="72" r="0.9"/>
+<circle cx="306" cy="72" r="0.9"/>
+<circle cx="332" cy="72" r="0.9"/>
+<circle cx="358" cy="72" r="0.9"/>
+<circle cx="384" cy="72" r="0.9"/>
+<circle cx="410" cy="72" r="0.9"/>
+<circle cx="436" cy="72" r="0.9"/>
+<circle cx="462" cy="72" r="0.9"/>
+<circle cx="488" cy="72" r="0.9"/>
+<circle cx="514" cy="72" r="0.9"/>
+<circle cx="540" cy="72" r="0.9"/>
+<circle cx="566" cy="72" r="0.9"/>
+<circle cx="592" cy="72" r="0.9"/>
+<circle cx="618" cy="72" r="0.9"/>
+<circle cx="644" cy="72" r="0.9"/>
+<circle cx="670" cy="72" r="0.9"/>
+<circle cx="696" cy="72" r="0.9"/>
+<circle cx="722" cy="72" r="0.9"/>
+<circle cx="748" cy="72" r="0.9"/>
+<circle cx="774" cy="72" r="0.9"/>
+<circle cx="800" cy="72" r="0.9"/>
+<circle cx="826" cy="72" r="0.9"/>
+<circle cx="852" cy="72" r="0.9"/>
+<circle cx="20" cy="98" r="0.9"/>
+<circle cx="46" cy="98" r="0.9"/>
+<circle cx="72" cy="98" r="0.9"/>
+<circle cx="98" cy="98" r="0.9"/>
+<circle cx="124" cy="98" r="0.9"/>
+<circle cx="150" cy="98" r="0.9"/>
+<circle cx="176" cy="98" r="0.9"/>
+<circle cx="202" cy="98" r="0.9"/>
+<circle cx="228" cy="98" r="0.9"/>
+<circle cx="254" cy="98" r="0.9"/>
+<circle cx="280" cy="98" r="0.9"/>
+<circle cx="306" cy="98" r="0.9"/>
+<circle cx="332" cy="98" r="0.9"/>
+<circle cx="358" cy="98" r="0.9"/>
+<circle cx="384" cy="98" r="0.9"/>
+<circle cx="410" cy="98" r="0.9"/>
+<circle cx="436" cy="98" r="0.9"/>
+<circle cx="462" cy="98" r="0.9"/>
+<circle cx="488" cy="98" r="0.9"/>
+<circle cx="514" cy="98" r="0.9"/>
+<circle cx="540" cy="98" r="0.9"/>
+<circle cx="566" cy="98" r="0.9"/>
+<circle cx="592" cy="98" r="0.9"/>
+<circle cx="618" cy="98" r="0.9"/>
+<circle cx="644" cy="98" r="0.9"/>
+<circle cx="670" cy="98" r="0.9"/>
+<circle cx="696" cy="98" r="0.9"/>
+<circle cx="722" cy="98" r="0.9"/>
+<circle cx="748" cy="98" r="0.9"/>
+<circle cx="774" cy="98" r="0.9"/>
+<circle cx="800" cy="98" r="0.9"/>
+<circle cx="826" cy="98" r="0.9"/>
+<circle cx="852" cy="98" r="0.9"/>
+<circle cx="20" cy="124" r="0.9"/>
+<circle cx="46" cy="124" r="0.9"/>
+<circle cx="72" cy="124" r="0.9"/>
+<circle cx="98" cy="124" r="0.9"/>
+<circle cx="124" cy="124" r="0.9"/>
+<circle cx="150" cy="124" r="0.9"/>
+<circle cx="176" cy="124" r="0.9"/>
+<circle cx="202" cy="124" r="0.9"/>
+<circle cx="228" cy="124" r="0.9"/>
+<circle cx="254" cy="124" r="0.9"/>
+<circle cx="280" cy="124" r="0.9"/>
+<circle cx="306" cy="124" r="0.9"/>
+<circle cx="332" cy="124" r="0.9"/>
+<circle cx="358" cy="124" r="0.9"/>
+<circle cx="384" cy="124" r="0.9"/>
+<circle cx="410" cy="124" r="0.9"/>
+<circle cx="436" cy="124" r="0.9"/>
+<circle cx="462" cy="124" r="0.9"/>
+<circle cx="488" cy="124" r="0.9"/>
+<circle cx="514" cy="124" r="0.9"/>
+<circle cx="540" cy="124" r="0.9"/>
+<circle cx="566" cy="124" r="0.9"/>
+<circle cx="592" cy="124" r="0.9"/>
+<circle cx="618" cy="124" r="0.9"/>
+<circle cx="644" cy="124" r="0.9"/>
+<circle cx="670" cy="124" r="0.9"/>
+<circle cx="696" cy="124" r="0.9"/>
+<circle cx="722" cy="124" r="0.9"/>
+<circle cx="748" cy="124" r="0.9"/>
+<circle cx="774" cy="124" r="0.9"/>
+<circle cx="800" cy="124" r="0.9"/>
+<circle cx="826" cy="124" r="0.9"/>
+<circle cx="852" cy="124" r="0.9"/>
+<circle cx="20" cy="150" r="0.9"/>
+<circle cx="46" cy="150" r="0.9"/>
+<circle cx="72" cy="150" r="0.9"/>
+<circle cx="98" cy="150" r="0.9"/>
+<circle cx="124" cy="150" r="0.9"/>
+<circle cx="150" cy="150" r="0.9"/>
+<circle cx="176" cy="150" r="0.9"/>
+<circle cx="202" cy="150" r="0.9"/>
+<circle cx="228" cy="150" r="0.9"/>
+<circle cx="254" cy="150" r="0.9"/>
+<circle cx="280" cy="150" r="0.9"/>
+<circle cx="306" cy="150" r="0.9"/>
+<circle cx="332" cy="150" r="0.9"/>
+<circle cx="358" cy="150" r="0.9"/>
+<circle cx="384" cy="150" r="0.9"/>
+<circle cx="410" cy="150" r="0.9"/>
+<circle cx="436" cy="150" r="0.9"/>
+<circle cx="462" cy="150" r="0.9"/>
+<circle cx="488" cy="150" r="0.9"/>
+<circle cx="514" cy="150" r="0.9"/>
+<circle cx="540" cy="150" r="0.9"/>
+<circle cx="566" cy="150" r="0.9"/>
+<circle cx="592" cy="150" r="0.9"/>
+<circle cx="618" cy="150" r="0.9"/>
+<circle cx="644" cy="150" r="0.9"/>
+<circle cx="670" cy="150" r="0.9"/>
+<circle cx="696" cy="150" r="0.9"/>
+<circle cx="722" cy="150" r="0.9"/>
+<circle cx="748" cy="150" r="0.9"/>
+<circle cx="774" cy="150" r="0.9"/>
+<circle cx="800" cy="150" r="0.9"/>
+<circle cx="826" cy="150" r="0.9"/>
+<circle cx="852" cy="150" r="0.9"/>
+<circle cx="20" cy="176" r="0.9"/>
+<circle cx="46" cy="176" r="0.9"/>
+<circle cx="72" cy="176" r="0.9"/>
+<circle cx="98" cy="176" r="0.9"/>
+<circle cx="124" cy="176" r="0.9"/>
+<circle cx="150" cy="176" r="0.9"/>
+<circle cx="176" cy="176" r="0.9"/>
+<circle cx="202" cy="176" r="0.9"/>
+<circle cx="228" cy="176" r="0.9"/>
+<circle cx="254" cy="176" r="0.9"/>
+<circle cx="280" cy="176" r="0.9"/>
+<circle cx="306" cy="176" r="0.9"/>
+<circle cx="332" cy="176" r="0.9"/>
+<circle cx="358" cy="176" r="0.9"/>
+<circle cx="384" cy="176" r="0.9"/>
+<circle cx="410" cy="176" r="0.9"/>
+<circle cx="436" cy="176" r="0.9"/>
+<circle cx="462" cy="176" r="0.9"/>
+<circle cx="488" cy="176" r="0.9"/>
+<circle cx="514" cy="176" r="0.9"/>
+<circle cx="540" cy="176" r="0.9"/>
+<circle cx="566" cy="176" r="0.9"/>
+<circle cx="592" cy="176" r="0.9"/>
+<circle cx="618" cy="176" r="0.9"/>
+<circle cx="644" cy="176" r="0.9"/>
+<circle cx="670" cy="176" r="0.9"/>
+<circle cx="696" cy="176" r="0.9"/>
+<circle cx="722" cy="176" r="0.9"/>
+<circle cx="748" cy="176" r="0.9"/>
+<circle cx="774" cy="176" r="0.9"/>
+<circle cx="800" cy="176" r="0.9"/>
+<circle cx="826" cy="176" r="0.9"/>
+<circle cx="852" cy="176" r="0.9"/>
+<circle cx="20" cy="202" r="0.9"/>
+<circle cx="46" cy="202" r="0.9"/>
+<circle cx="72" cy="202" r="0.9"/>
+<circle cx="98" cy="202" r="0.9"/>
+<circle cx="124" cy="202" r="0.9"/>
+<circle cx="150" cy="202" r="0.9"/>
+<circle cx="176" cy="202" r="0.9"/>
+<circle cx="202" cy="202" r="0.9"/>
+<circle cx="228" cy="202" r="0.9"/>
+<circle cx="254" cy="202" r="0.9"/>
+<circle cx="280" cy="202" r="0.9"/>
+<circle cx="306" cy="202" r="0.9"/>
+<circle cx="332" cy="202" r="0.9"/>
+<circle cx="358" cy="202" r="0.9"/>
+<circle cx="384" cy="202" r="0.9"/>
+<circle cx="410" cy="202" r="0.9"/>
+<circle cx="436" cy="202" r="0.9"/>
+<circle cx="462" cy="202" r="0.9"/>
+<circle cx="488" cy="202" r="0.9"/>
+<circle cx="514" cy="202" r="0.9"/>
+<circle cx="540" cy="202" r="0.9"/>
+<circle cx="566" cy="202" r="0.9"/>
+<circle cx="592" cy="202" r="0.9"/>
+<circle cx="618" cy="202" r="0.9"/>
+<circle cx="644" cy="202" r="0.9"/>
+<circle cx="670" cy="202" r="0.9"/>
+<circle cx="696" cy="202" r="0.9"/>
+<circle cx="722" cy="202" r="0.9"/>
+<circle cx="748" cy="202" r="0.9"/>
+<circle cx="774" cy="202" r="0.9"/>
+<circle cx="800" cy="202" r="0.9"/>
+<circle cx="826" cy="202" r="0.9"/>
+<circle cx="852" cy="202" r="0.9"/>
+<circle cx="20" cy="228" r="0.9"/>
+<circle cx="46" cy="228" r="0.9"/>
+<circle cx="72" cy="228" r="0.9"/>
+<circle cx="98" cy="228" r="0.9"/>
+<circle cx="124" cy="228" r="0.9"/>
+<circle cx="150" cy="228" r="0.9"/>
+<circle cx="176" cy="228" r="0.9"/>
+<circle cx="202" cy="228" r="0.9"/>
+<circle cx="228" cy="228" r="0.9"/>
+<circle cx="254" cy="228" r="0.9"/>
+<circle cx="280" cy="228" r="0.9"/>
+<circle cx="306" cy="228" r="0.9"/>
+<circle cx="332" cy="228" r="0.9"/>
+<circle cx="358" cy="228" r="0.9"/>
+<circle cx="384" cy="228" r="0.9"/>
+<circle cx="410" cy="228" r="0.9"/>
+<circle cx="436" cy="228" r="0.9"/>
+<circle cx="462" cy="228" r="0.9"/>
+<circle cx="488" cy="228" r="0.9"/>
+<circle cx="514" cy="228" r="0.9"/>
+<circle cx="540" cy="228" r="0.9"/>
+<circle cx="566" cy="228" r="0.9"/>
+<circle cx="592" cy="228" r="0.9"/>
+<circle cx="618" cy="228" r="0.9"/>
+<circle cx="644" cy="228" r="0.9"/>
+<circle cx="670" cy="228" r="0.9"/>
+<circle cx="696" cy="228" r="0.9"/>
+<circle cx="722" cy="228" r="0.9"/>
+<circle cx="748" cy="228" r="0.9"/>
+<circle cx="774" cy="228" r="0.9"/>
+<circle cx="800" cy="228" r="0.9"/>
+<circle cx="826" cy="228" r="0.9"/>
+<circle cx="852" cy="228" r="0.9"/>
+</g>
+<text class="u" style="animation-delay:.1s" x="40" y="54" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" letter-spacing="2.4" fill="#2ebfa5">CYBERSÉCURITÉ · RÉSEAUX · ARCHITECTURE</text>
+<text class="u" style="animation-delay:.25s" x="40" y="104" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif" font-size="46" font-weight="800" letter-spacing="-1" fill="#d7ece8">Baptiste Rouault</text>
+<rect x="40" y="117" width="0" height="3" rx="1.5" fill="url(#bar)"><animate attributeName="width" from="0" to="132" begin=".6s" dur=".8s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect>
+<text class="u" style="animation-delay:.5s" x="40" y="150" font-family="-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif" font-size="19" fill="#d7ece8" fill-opacity=".88">RSSI adjoint &amp; Architecte réseaux et cybersécurité</text>
+<defs><clipPath id="typed"><rect x="56" y="168" width="0" height="20"><animate attributeName="width" values="0.0;7.8;15.6;23.4;31.2;39.0;46.8;54.6;62.4;70.2;78.0;85.8;93.6;101.4;109.2;117.0;124.8;132.6;140.4;148.2;156.0;163.8;171.6;179.4;187.2;195.0;202.8;210.6;218.4;226.2;234.0;241.8;249.6;257.4;265.2;273.0;280.8;288.6;296.4;304.2;312.0;319.8;327.6;335.4;343.2;351.0;358.8;366.6;374.4" calcMode="discrete" begin="1.3s" dur="2.16s" fill="freeze"/></rect></clipPath></defs>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="13"><text class="u" style="animation-delay:1.0s" x="40" y="182" fill="#2ebfa5">$</text><text clip-path="url(#typed)" x="56" y="182" fill="#d7ece8">defense-in-depth --zero-trust --detect --respond</text><rect class="caret" x="432.4" y="170" width="7" height="15" fill="#2ebfa5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.46s" dur="0.01s" fill="freeze"/></rect></g>
+<g class="u" style="animation-delay:2.20s"><rect x="40" y="204" width="48" height="24" rx="12" fill="#2ebfa5" fill-opacity=".09" stroke="#14705f"/><text x="64" y="220" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#7be0cc">NIS2</text></g>
+<g class="u" style="animation-delay:2.34s"><rect x="96.4" y="204" width="81" height="24" rx="12" fill="#2ebfa5" fill-opacity=".09" stroke="#14705f"/><text x="137" y="220" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#7be0cc">ISO 27001</text></g>
+<g class="u" style="animation-delay:2.48s"><rect x="185.8" y="204" width="88" height="24" rx="12" fill="#2ebfa5" fill-opacity=".09" stroke="#14705f"/><text x="230" y="220" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#7be0cc">Zero Trust</text></g>
+<g class="u" style="animation-delay:2.62s"><rect x="281.8" y="204" width="88" height="24" rx="12" fill="#2ebfa5" fill-opacity=".09" stroke="#14705f"/><text x="326" y="220" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#7be0cc">SIEM / XDR</text></g>
+<g class="u" style="animation-delay:2.76s"><rect x="377.8" y="204" width="108" height="24" rx="12" fill="#2ebfa5" fill-opacity=".09" stroke="#14705f"/><text x="432" y="220" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#7be0cc">Infra as Code</text></g>
+<g stroke="#14705f" stroke-width="1" fill="none" opacity=".55">
+<line x1="706" y1="120" x2="612" y2="52"/>
+<line x1="612" y1="52" x2="680" y2="26" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="680" y2="26"/>
+<line x1="680" y1="26" x2="782" y2="46" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="782" y2="46"/>
+<line x1="782" y1="46" x2="826" y2="112" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="826" y2="112"/>
+<line x1="826" y1="112" x2="792" y2="192" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="792" y2="192"/>
+<line x1="792" y1="192" x2="706" y2="210" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="706" y2="210"/>
+<line x1="706" y1="210" x2="616" y2="176" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="616" y2="176"/>
+<line x1="616" y1="176" x2="572" y2="112" stroke-dasharray="2 4" opacity=".6"/>
+<line x1="706" y1="120" x2="572" y2="112"/>
+<line x1="572" y1="112" x2="612" y2="52" stroke-dasharray="2 4" opacity=".6"/>
+</g>
+<circle r="2.6" fill="#7be0cc" opacity="0"><animateMotion dur="2.4s" begin="1.00s" repeatCount="indefinite" path="M612 52 L706 120"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.4s" begin="1.00s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#2ebfa5" opacity="0"><animateMotion dur="3.0s" begin="1.35s" repeatCount="indefinite" path="M706 120 L680 26"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.0s" begin="1.35s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#7be0cc" opacity="0"><animateMotion dur="3.6s" begin="1.70s" repeatCount="indefinite" path="M782 46 L706 120"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.6s" begin="1.70s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#2ebfa5" opacity="0"><animateMotion dur="2.4s" begin="2.05s" repeatCount="indefinite" path="M706 120 L826 112"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.4s" begin="2.05s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#7be0cc" opacity="0"><animateMotion dur="3.0s" begin="2.40s" repeatCount="indefinite" path="M792 192 L706 120"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.0s" begin="2.40s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#2ebfa5" opacity="0"><animateMotion dur="3.6s" begin="2.75s" repeatCount="indefinite" path="M706 120 L706 210"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.6s" begin="2.75s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#7be0cc" opacity="0"><animateMotion dur="2.4s" begin="3.10s" repeatCount="indefinite" path="M616 176 L706 120"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.4s" begin="3.10s" repeatCount="indefinite"/></circle>
+<circle r="2.6" fill="#2ebfa5" opacity="0"><animateMotion dur="3.0s" begin="3.45s" repeatCount="indefinite" path="M706 120 L572 112"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.0s" begin="3.45s" repeatCount="indefinite"/></circle>
+<circle cx="612" cy="52" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="0.80s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="0.80s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:0.50s" cx="612" cy="52" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:0.70s" x="612" y="40" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">EDR</text>
+<circle cx="680" cy="26" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="1.17s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="1.17s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:0.60s" cx="680" cy="26" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:0.80s" x="680" y="14" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">SIEM</text>
+<circle cx="782" cy="46" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="1.54s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="1.54s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:0.70s" cx="782" cy="46" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:0.90s" x="782" y="34" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">IAM</text>
+<circle cx="826" cy="112" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="1.91s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="1.91s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:0.80s" cx="826" cy="112" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:1.00s" x="824" y="134" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">ZTNA</text>
+<circle cx="792" cy="192" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="2.28s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:0.90s" cx="792" cy="192" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:1.10s" x="792" y="214" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">NGFW</text>
+<circle cx="706" cy="210" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="2.65s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="2.65s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:1.00s" cx="706" cy="210" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:1.20s" x="706" y="232" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">VPN</text>
+<circle cx="616" cy="176" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="3.02s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="3.02s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:1.10s" cx="616" cy="176" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:1.30s" x="616" y="198" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">PKI</text>
+<circle cx="572" cy="112" r="6" fill="none" stroke="#2ebfa5" opacity="0"><animate attributeName="r" values="5;14" dur="3s" begin="3.39s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="3s" begin="3.39s" repeatCount="indefinite"/></circle>
+<circle class="u" style="animation-delay:1.20s" cx="572" cy="112" r="5" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<text class="u" style="animation-delay:1.40s" x="572" y="100" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="9" letter-spacing="1" fill="#6f8a88">IaC</text>
+<circle cx="706" cy="120" r="34" fill="none" stroke="#2ebfa5" stroke-width="1" stroke-dasharray="3 7" opacity=".7"><animateTransform attributeName="transform" type="rotate" from="0 706 120" to="360 706 120" dur="22s" repeatCount="indefinite"/></circle>
+<circle cx="706" cy="120" r="24" fill="#0b1214" stroke="#2ebfa5" stroke-width="1.6"/>
+<circle cx="706" cy="120" r="24" fill="none" stroke="#7be0cc" opacity="0"><animate attributeName="r" values="24;42" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".55;0" dur="3.2s" repeatCount="indefinite"/></circle>
+<path d="M706 107 l11 4.2 v8.4 c0 7.6 -5 12.8 -11 15.4 c-6 -2.6 -11 -7.8 -11 -15.4 v-8.4 z" fill="#2ebfa5" fill-opacity=".14" stroke="#2ebfa5" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M701 121 l4 4 l7.5 -8.5" fill="none" stroke="#7be0cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="22" stroke-dashoffset="22"><animate attributeName="stroke-dashoffset" from="22" to="0" begin="1.2s" dur=".6s" fill="freeze"/></path>
+</svg>

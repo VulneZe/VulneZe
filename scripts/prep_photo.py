@@ -1,71 +1,84 @@
-"""
-Prepare the dp (a flat illustration) for clean ASCII conversion:
-  1. remove the background (rembg) so the subject is isolated
-  2. bilateral-smooth away the paper texture (otherwise skin turns to `::::`
-     noise and the eyes drown in it) while keeping the drawn lines sharp
-  3. stretch tones so skin lands near white and hair/lines stay dark
-  4. darken the line work (difference-of-gaussians ridges) -- eyelids, pupils,
-     glasses frame and smile are thin dark strokes that plain luminance
-     averaging washes out at ascii resolution
-  5. composite onto white and crop square around the subject
+#!/usr/bin/env python3
+"""Prépare la photo pour la conversion ASCII.
 
-Output: source-prepped.png (grayscale), consumed by make_ascii_svg.py.
+1. Détourage du sujet (rembg si installé, sinon GrabCut OpenCV)
+2. Contraste local (CLAHE) pour donner du relief au visage
+3. Composition sur fond blanc pur (fond -> espaces dans l'ASCII)
 
-    python scripts/prep_photo.py <input.png> [output.png]
+Usage : python scripts/prep_photo.py source-photo.png
+Sortie : source-prepped.png (niveaux de gris)
 """
-import os
 import sys
-
 import cv2
 import numpy as np
-from PIL import Image
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-INP = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "source-photo.png")
-OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "source-prepped.png")
 
-LINE_WEIGHT = 0.6     # how hard drawn lines are pushed toward black
+def subject_mask(bgr):
+    h, w = bgr.shape[:2]
+    try:
+        from rembg import remove  # type: ignore
+        rgba = remove(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB))
+        return (np.asarray(rgba)[:, :, 3] > 128).astype(np.uint8) * 255
+    except Exception:
+        pass
 
-# 1. cut out the subject -- use the alpha channel if the source already has a
-#    transparent background, otherwise fall back to rembg
-img = Image.open(INP).convert("RGBA")
-alpha_test = np.array(img.split()[-1])
-if alpha_test.min() < 128:
-    cut = img                                        # already isolated
-else:
-    from rembg import remove                          # heavy dep, local only
-    cut = remove(img)
-rgb = np.array(cut.convert("RGB"))
-alpha = np.array(cut.split()[-1])                 # 0 = background
-gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    # Fallback GrabCut : on initialise avec un rectangle + une zone sûre
+    mask = np.full((h, w), cv2.GC_BGD, np.uint8)
+    rect = (int(w * 0.10), int(h * 0.06), int(w * 0.80), int(h * 0.94))
+    x, y, rw, rh = rect
+    mask[y:y + rh, x:x + rw] = cv2.GC_PR_BGD
+    # Tête + buste : probablement sujet
+    cv2.ellipse(mask, (int(w * 0.50), int(h * 0.40)), (int(w * 0.24), int(h * 0.34)),
+                0, 0, 360, cv2.GC_PR_FGD, -1)
+    mask[int(h * 0.78):, int(w * 0.05):int(w * 0.95)] = cv2.GC_PR_FGD
+    # Cœur du visage / pull : sujet certain
+    cv2.ellipse(mask, (int(w * 0.50), int(h * 0.44)), (int(w * 0.13), int(h * 0.20)),
+                0, 0, 360, cv2.GC_FGD, -1)
+    mask[int(h * 0.92):, int(w * 0.25):int(w * 0.75)] = cv2.GC_FGD
 
-# 2. smooth texture, keep edges
-smooth = gray
-for _ in range(3):
-    smooth = cv2.bilateralFilter(smooth, 9, 40, 9)
+    bgd = np.zeros((1, 65), np.float64)
+    fgd = np.zeros((1, 65), np.float64)
+    cv2.grabCut(bgr, mask, None, bgd, fgd, 8, cv2.GC_INIT_WITH_MASK)
+    out = np.where((mask == cv2.GC_FGD) | (mask == cv2.GC_PR_FGD), 255, 0).astype(np.uint8)
+    # Nettoyage morphologique + plus grande composante
+    out = cv2.morphologyEx(out, cv2.MORPH_CLOSE, np.ones((15, 15), np.uint8))
+    out = cv2.morphologyEx(out, cv2.MORPH_OPEN, np.ones((7, 7), np.uint8))
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(out)
+    if n > 1:
+        biggest = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
+        out = np.where(lab == biggest, 255, 0).astype(np.uint8)
+    return out
 
-# 3. tone stretch over the subject only
-lo, hi = np.percentile(smooth[alpha > 128], [2, 92])
-tone = np.clip((smooth.astype(np.float32) - lo) / (hi - lo), 0, 1)
 
-# 4. dark-on-light ridges -> darken
-fine = cv2.GaussianBlur(smooth, (0, 0), 1.5).astype(np.float32)
-coarse = cv2.GaussianBlur(smooth, (0, 0), 6).astype(np.float32)
-lines = np.clip((coarse - fine) / 40.0, 0, 1)
-out = np.clip(tone - LINE_WEIGHT * lines, 0, 1) * 255
+def main(src, dst="source-prepped.png"):
+    bgr = cv2.imread(src)
+    if bgr is None:
+        sys.exit(f"Image introuvable : {src}")
 
-# 5. paste onto white (feathered a hair to avoid a halo), square crop
-mask = cv2.GaussianBlur(alpha.astype(np.float32) / 255.0, (0, 0), 1.0)
-out = out * mask + 255.0 * (1.0 - mask)
+    mask = subject_mask(bgr)
+    # Retire les résidus de décor autour de la tête (au-dessus des épaules)
+    h, w = mask.shape
+    mask[: int(h * 0.70), : int(w * 0.275)] = 0
+    mask[: int(h * 0.70), int(w * 0.75):] = 0
+    soft = cv2.GaussianBlur(mask, (0, 0), 2.0).astype(np.float32) / 255.0
 
-ys, xs = np.where(alpha > 20)
-side = max(xs.max() - xs.min(), ys.max() - ys.min()) + 60
-cx, cy = (xs.min() + xs.max()) // 2, (ys.min() + ys.max()) // 2
-canvas = np.full((side, side), 255, np.uint8)
-x0, y0 = cx - side // 2, cy - side // 2
-sx0, sy0 = max(x0, 0), max(y0, 0)
-sx1, sy1 = min(x0 + side, out.shape[1]), min(y0 + side, out.shape[0])
-canvas[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = out[sy0:sy1, sx0:sx1].astype(np.uint8)
+    gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
+    clahe = cv2.createCLAHE(clipLimit=3.2, tileGridSize=(8, 8))
+    gray = clahe.apply(gray)
+    # Léger étirement de contraste sur le sujet uniquement
+    subj = gray[mask > 0]
+    lo, hi = np.percentile(subj, [2, 98])
+    gray = np.clip((gray.astype(np.float32) - lo) / max(hi - lo, 1) * 255, 0, 255)
 
-Image.fromarray(canvas, mode="L").save(OUT)
-print("wrote", OUT, canvas.shape)
+    # Sorties intermédiaires utilisées par le portrait en points (halftone)
+    cv2.imwrite("source-gray.png", gray.astype(np.uint8))
+    cv2.imwrite("source-mask.png", (soft * 255).astype(np.uint8))
+
+    white = np.full_like(gray, 255.0)
+    comp = gray * soft + white * (1.0 - soft)
+    cv2.imwrite(dst, comp.astype(np.uint8))
+    print(f"OK -> {dst}")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1] if len(sys.argv) > 1 else "source-photo.png")
