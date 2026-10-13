@@ -19,25 +19,28 @@ CARD_H = 128
 # (nom, tagline, pile techno, icône)
 PROJECTS = [
     ("Hydia", "Coffre-fort numérique zero-knowledge : secrets, documents, partage d'équipe.",
-     ["TypeScript", "Fastify", "Supabase", "E2EE"], "lock"),
+     ["TypeScript", "Fastify", "PostgreSQL", "E2EE"], "lock"),
     ("Lab Entreprise", "Maquette d'entreprise complète : routage, VPN, AD, PKI / AD CS, durcissement.",
      ["AD DS / AD CS", "PKI", "Routage & VPN", "GPO"], "share"),
-    ("atlos.fr", "Site vitrine Atlos : offres cyber & réseau pour les TPE.",
-     ["React", "Vite", "Tailwind"], "globe"),
+    ("Infra as Code", "Infra sysadmin 100 % open source : provisionnement, sauvegarde, supervision.",
+     ["Terraform", "Ansible", "Proxmox", "Backup"], "import"),
     ("NetRecon", "Cartographie réseau discrète : découverte passive, sans alerte côté AD.",
      ["Python", "Scan passif", "ARP / mDNS", "AD-aware"], "eye"),
+    ("Detection Lab", "Chaîne de détection bout en bout : collecte, corrélation, réponse.",
+     ["SIEM / XDR", "EDR", "IDS / IPS", "Sysmon"], "score"),
     ("CVEAtlos", "Veille et scoring de vulnérabilités orienté exploitation.",
-     ["Next.js", "Rust"], "score"),
-    ("Hydia BackOffice", "Back-office multi-tenant : organisations, modules de formation, Edge Functions.",
-     ["React", "Supabase", "Deno"], "folder"),
+     ["Next.js", "Rust"], "folder"),
 ]
 
 LANG_COLORS = {
     "TypeScript": "#3178c6", "Rust": "#b7410e", "React": "#149eca",
     "Vite": "#8b5cf6", "Tailwind": "#38bdf8", "Fastify": "#181c22",
     "Supabase": "#3ecf8e", "Deno": "#181c22", "Next.js": "#181c22",
-    "E2EE": ACCENT_DEEP, "Python": "#3572a5", "AD DS / AD CS": "#3178c6",
-    "PKI": "#8b5cf6", "Routage & VPN": "#149eca", "GPO": "#3178c6",
+    "E2EE": ACCENT_DEEP, "Python": "#3572a5", "PostgreSQL": "#336791",
+    "AD DS / AD CS": "#3178c6", "PKI": "#8b5cf6", "Routage & VPN": "#149eca",
+    "GPO": "#3178c6", "Terraform": "#7b42bc", "Ansible": "#b7410e",
+    "Proxmox": "#e57000", "Backup": "#38bdf8", "SIEM / XDR": "#3178c6",
+    "EDR": "#b7410e", "IDS / IPS": "#8b5cf6", "Sysmon": "#149eca",
     "Scan passif": ACCENT_DEEP, "ARP / mDNS": "#38bdf8", "AD-aware": "#b7410e",
 }
 
