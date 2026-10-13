@@ -21,9 +21,9 @@
 
 <br>
 
-<h3>Architecture</h3>
+<h3>Projets</h3>
 
-<img src="./architecture.svg" width="860" alt="Architecture de sécurité : accès, identité, périmètre, zones segmentées, télémétrie, SIEM/XDR, gouvernance" />
+<img src="./projects.svg" width="860" alt="Projets : Hydia, atlos.fr, CVEAtlos, back-office Hydia" />
 
 <br><br>
 
