@@ -4,13 +4,13 @@
 
 <br><br>
 
-<h3><code>vulneze@github ~ $ ./contributions.sh</code></h3>
+<h3>Contributions</h3>
 
 <img src="./contrib-heatmap.svg" width="860" alt="Graphique des contributions GitHub de vulneze, actualisé chaque jour" />
 
 <br><br>
 
-<h3><code>vulneze@github ~ $ whoami</code></h3>
+<h3>Profil</h3>
 
 <table>
   <tr>
@@ -21,13 +21,13 @@
 
 <br>
 
-<h3><code>vulneze@github ~ $ ./architecture.sh</code></h3>
+<h3>Architecture</h3>
 
 <img src="./architecture.svg" width="860" alt="Architecture de sécurité : accès, identité, périmètre, zones segmentées, télémétrie, SIEM/XDR, gouvernance" />
 
 <br><br>
 
-<h3><code>vulneze@github ~ $ ./skills.sh</code></h3>
+<h3>Compétences</h3>
 
 <img src="./skills.svg" width="860" alt="Compétences techniques par domaine" />
 

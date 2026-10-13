@@ -8,8 +8,8 @@ Usage : python scripts/make_info_card.py   ->  info-card.svg
 import os
 import textwrap
 
-from theme import (ACCENT, ACCENT2, ACCENT_DEEP, BORDER, DIM, MONO, TEXT, esc, panel,
-                   svg_open, window_chrome)
+from theme import (ACCENT, ACCENT2, ACCENT_DEEP, BORDER, DIM, INK, MONO, TEXT, TINT, TINT2,
+                   esc, icon_atlos, panel, svg_open, header, atlos_logo, hyzia_logo)
 
 OUT = "info-card.svg"
 STATIC = os.environ.get("STATIC") == "1"
@@ -17,7 +17,7 @@ STATIC = os.environ.get("STATIC") == "1"
 W, H = 460, 482                 # même hauteur que le portrait (400 + 460 = 860)
 FONT = 12.5
 CW = FONT * 0.6
-LH = 18.0
+LH = 17.0
 X0 = 24
 KEY_W = 12
 WRAP = 40
@@ -33,7 +33,7 @@ FIELDS = [
     ("Automation", "Ansible · Jenkins · Docker · PowerShell · Bash"),
 ]
 
-PALETTE = [BORDER, ACCENT_DEEP, ACCENT, ACCENT2, TEXT, "#ff5f57", "#febc2e", DIM]
+PALETTE = [TINT2, ACCENT2, ACCENT, ACCENT_DEEP, INK, TEXT]
 
 
 def main():
@@ -46,13 +46,13 @@ def main():
     def a(d):
         return "" if STATIC else f' class="l" style="animation-delay:{d:.2f}s"'
 
-    y, delay, step = 68, 0.3, 0.12
-    body = [f'<text x="{X0}" y="{y}"{a(delay)} font-size="{FONT + 3}" font-weight="700">'
-            f'<tspan fill="{ACCENT}">vulneze</tspan><tspan fill="{DIM}">@</tspan><tspan fill="{ACCENT}">github</tspan></text>']
-    y += LH
+    y, delay, step = 72, 0.3, 0.12
+    body = [f'<text x="{X0}" y="{y}"{a(delay)} font-size="{FONT + 3.5}" font-weight="800">'
+            f'<tspan fill="{INK}">vulneze</tspan><tspan fill="{DIM}"> · </tspan><tspan fill="{ACCENT}">atlos</tspan></text>']
+    y += 10
     delay += step
-    body.append(f'<text x="{X0}" y="{y}"{a(delay)} fill="{DIM}">{"─" * 36}</text>')
-    y += LH * 1.2
+    body.append(f'<rect x="{X0}" y="{y:.0f}" width="{W - 2 * X0}" height="1" fill="{BORDER}"{a(delay)}/>')
+    y += LH * 1.4
     delay += step
 
     prev_key = None
@@ -69,15 +69,19 @@ def main():
 
     y += 10
     for i, c in enumerate(PALETTE):
-        body.append(f'<rect x="{X0 + i * 26}" y="{y:.1f}" width="22" height="12" rx="3" fill="{c}"{a(delay + i * 0.05)}/>')
+        body.append(f'<rect x="{X0 + i * 26}" y="{y:.1f}" width="22" height="12" rx="6" fill="{c}"{a(delay + i * 0.05)}/>')
+    y += 30
+    body.append(f'<g{a(delay + 0.3)}>{atlos_logo(X0, y, 12)}'
+                f'{hyzia_logo(X0 + 70, y - 2, 16)}'
+                f'<text x="{X0 + 92}" y="{y + 11}" font-family="{MONO}" font-size="10" fill="{DIM}">atlos.fr · hyzia.fr</text></g>')
     y += 12
-    assert y + 20 < H, f"contenu trop long pour la carte ({y:.0f} > {H})"
+    assert y + 8 < H, f"contenu trop long pour la carte ({y:.0f} > {H})"
 
     css = "" if STATIC else (
         "<style>.l{opacity:0;animation:in .45s ease-out forwards}"
         "@keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}</style>")
     svg = [svg_open(W, H, "Carte de profil de Baptiste Rouault : rôle, périmètre, réalisations"), css,
-           panel(W, H), window_chrome(W, "neofetch"),
+           panel(W, H), header(W, "Profil"),
            f'<g font-family="{MONO}" font-size="{FONT}" xml:space="preserve">', *body, "</g>", "</svg>"]
     with open(OUT, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
