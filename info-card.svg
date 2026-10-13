@@ -1,52 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="460" height="482" viewBox="0 0 460 482" role="img" aria-label="Carte de profil de Baptiste Rouault : rôle, périmètre, réalisations">
 <style>.l{opacity:0;animation:in .45s ease-out forwards}@keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}</style>
-<rect x="0.5" y="0.5" width="459" height="481" rx="12" fill="#0b1214" stroke="#1c2b2f"/>
-<path d="M0.5 12.5a12 12 0 0 1 12-12h435a12 12 0 0 1 12 12V34H0.5z" fill="#111b1e"/>
-<line x1="0.5" y1="34" x2="459.5" y2="34" stroke="#1c2b2f"/>
-<circle cx="20" cy="17.5" r="5" fill="#ff5f57"/><circle cx="38" cy="17.5" r="5" fill="#febc2e"/><circle cx="56" cy="17.5" r="5" fill="#2ebfa5"/>
-<text x="230" y="21" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="11" fill="#6f8a88">neofetch</text>
+<rect x="0.5" y="0.5" width="459" height="481" rx="14" fill="#ffffff" stroke="#dfe8e6"/>
+<path d="M0.5 14.5a14 14 0 0 1 14-14h431a14 14 0 0 1 14 14V40H0.5z" fill="#eef4f3"/>
+<line x1="0.5" y1="40" x2="459.5" y2="40" stroke="#dfe8e6"/>
+<defs><linearGradient id="hdg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ecdb8"/><stop offset="1" stop-color="#1c8f7c"/></linearGradient></defs>
+<rect x="18" y="14" width="13" height="13" rx="4" fill="url(#hdg)"/>
+<path d="M22.2 20.5l1.9 1.9 3.6-4" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40" y="24.5" font-family="Manrope,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif" font-size="12.5" font-weight="700" letter-spacing=".4" fill="#15302b">Profil</text>
 <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="12.5" xml:space="preserve">
-<text x="24" y="68" class="l" style="animation-delay:0.30s" font-size="15.5" font-weight="700"><tspan fill="#2ebfa5">vulneze</tspan><tspan fill="#6f8a88">@</tspan><tspan fill="#2ebfa5">github</tspan></text>
-<text x="24" y="86.0" class="l" style="animation-delay:0.42s" fill="#6f8a88">────────────────────────────────────</text>
-<text x="24" y="107.6" class="l" style="animation-delay:0.54s"><tspan fill="#2ebfa5" font-weight="700">Rôle</tspan></text>
-<text x="114.0" y="107.6" class="l" style="animation-delay:0.54s" fill="#d7ece8">RSSI adjoint · Architecte réseaux &amp;</text>
-<text x="24" y="125.6" class="l" style="animation-delay:0.66s"></text>
-<text x="114.0" y="125.6" class="l" style="animation-delay:0.66s" fill="#d7ece8">cybersécurité</text>
-<text x="24" y="148.6" class="l" style="animation-delay:0.78s"><tspan fill="#2ebfa5" font-weight="700">Focus</tspan></text>
-<text x="114.0" y="148.6" class="l" style="animation-delay:0.78s" fill="#d7ece8">Défense en profondeur · Zero Trust ·</text>
-<text x="24" y="166.6" class="l" style="animation-delay:0.90s"></text>
-<text x="114.0" y="166.6" class="l" style="animation-delay:0.90s" fill="#d7ece8">détection &amp; réponse</text>
-<text x="24" y="189.6" class="l" style="animation-delay:1.02s"><tspan fill="#2ebfa5" font-weight="700">En cours</tspan></text>
-<text x="114.0" y="189.6" class="l" style="animation-delay:1.02s" fill="#d7ece8">SMSI &amp; conformité NIS2 / ISO 27001 ·</text>
-<text x="24" y="207.6" class="l" style="animation-delay:1.14s"></text>
-<text x="114.0" y="207.6" class="l" style="animation-delay:1.14s" fill="#d7ece8">XDR-EDR-SIEM on-premise · architecture</text>
-<text x="24" y="225.6" class="l" style="animation-delay:1.26s"></text>
-<text x="114.0" y="225.6" class="l" style="animation-delay:1.26s" fill="#d7ece8">réseau</text>
-<text x="24" y="248.6" class="l" style="animation-delay:1.38s"><tspan fill="#2ebfa5" font-weight="700">Livré</tspan></text>
-<text x="114.0" y="248.6" class="l" style="animation-delay:1.38s" fill="#d7ece8">Déploiement Wazuh &amp; Bitdefender ·</text>
-<text x="24" y="266.6" class="l" style="animation-delay:1.50s"></text>
-<text x="114.0" y="266.6" class="l" style="animation-delay:1.50s" fill="#d7ece8">migration VPN → ZTNA ·</text>
-<text x="24" y="284.6" class="l" style="animation-delay:1.62s"></text>
-<text x="114.0" y="284.6" class="l" style="animation-delay:1.62s" fill="#d7ece8">micro-segmentation · durcissement</text>
-<text x="24" y="302.6" class="l" style="animation-delay:1.74s"></text>
-<text x="114.0" y="302.6" class="l" style="animation-delay:1.74s" fill="#d7ece8">Windows / Linux, AD, GPO</text>
-<text x="24" y="325.6" class="l" style="animation-delay:1.86s"><tspan fill="#2ebfa5" font-weight="700">Échelle</tspan></text>
-<text x="114.0" y="325.6" class="l" style="animation-delay:1.86s" fill="#d7ece8">parc de 600 utilisateurs</text>
-<text x="24" y="348.6" class="l" style="animation-delay:1.98s"><tspan fill="#2ebfa5" font-weight="700">Détection</tspan></text>
-<text x="114.0" y="348.6" class="l" style="animation-delay:1.98s" fill="#d7ece8">Wazuh · Bitdefender · Sentinel · Tehtris</text>
-<text x="24" y="371.6" class="l" style="animation-delay:2.10s"><tspan fill="#2ebfa5" font-weight="700">Périmètre</tspan></text>
-<text x="114.0" y="371.6" class="l" style="animation-delay:2.10s" fill="#d7ece8">Fortinet · pfSense · WAF · VLAN / VPN</text>
-<text x="24" y="394.6" class="l" style="animation-delay:2.22s"><tspan fill="#2ebfa5" font-weight="700">Automation</tspan></text>
-<text x="114.0" y="394.6" class="l" style="animation-delay:2.22s" fill="#d7ece8">Ansible · Jenkins · Docker · PowerShell</text>
-<text x="24" y="412.6" class="l" style="animation-delay:2.34s"></text>
-<text x="114.0" y="412.6" class="l" style="animation-delay:2.34s" fill="#d7ece8">· Bash</text>
-<rect x="24" y="440.6" width="22" height="12" rx="3" fill="#1c2b2f" class="l" style="animation-delay:2.46s"/>
-<rect x="50" y="440.6" width="22" height="12" rx="3" fill="#14705f" class="l" style="animation-delay:2.51s"/>
-<rect x="76" y="440.6" width="22" height="12" rx="3" fill="#2ebfa5" class="l" style="animation-delay:2.56s"/>
-<rect x="102" y="440.6" width="22" height="12" rx="3" fill="#7be0cc" class="l" style="animation-delay:2.61s"/>
-<rect x="128" y="440.6" width="22" height="12" rx="3" fill="#d7ece8" class="l" style="animation-delay:2.66s"/>
-<rect x="154" y="440.6" width="22" height="12" rx="3" fill="#ff5f57" class="l" style="animation-delay:2.71s"/>
-<rect x="180" y="440.6" width="22" height="12" rx="3" fill="#febc2e" class="l" style="animation-delay:2.76s"/>
-<rect x="206" y="440.6" width="22" height="12" rx="3" fill="#6f8a88" class="l" style="animation-delay:2.81s"/>
+<text x="24" y="72" class="l" style="animation-delay:0.30s" font-size="16.0" font-weight="800"><tspan fill="#15302b">vulneze</tspan><tspan fill="#5a6570"> · </tspan><tspan fill="#17a08a">atlos</tspan></text>
+<rect x="24" y="82" width="412" height="1" fill="#dfe8e6" class="l" style="animation-delay:0.42s"/>
+<text x="24" y="105.8" class="l" style="animation-delay:0.54s"><tspan fill="#17a08a" font-weight="700">Rôle</tspan></text>
+<text x="114.0" y="105.8" class="l" style="animation-delay:0.54s" fill="#181c22">RSSI adjoint · Architecte réseaux &amp;</text>
+<text x="24" y="122.8" class="l" style="animation-delay:0.66s"></text>
+<text x="114.0" y="122.8" class="l" style="animation-delay:0.66s" fill="#181c22">cybersécurité</text>
+<text x="24" y="144.8" class="l" style="animation-delay:0.78s"><tspan fill="#17a08a" font-weight="700">Focus</tspan></text>
+<text x="114.0" y="144.8" class="l" style="animation-delay:0.78s" fill="#181c22">Défense en profondeur · Zero Trust ·</text>
+<text x="24" y="161.8" class="l" style="animation-delay:0.90s"></text>
+<text x="114.0" y="161.8" class="l" style="animation-delay:0.90s" fill="#181c22">détection &amp; réponse</text>
+<text x="24" y="183.8" class="l" style="animation-delay:1.02s"><tspan fill="#17a08a" font-weight="700">En cours</tspan></text>
+<text x="114.0" y="183.8" class="l" style="animation-delay:1.02s" fill="#181c22">SMSI &amp; conformité NIS2 / ISO 27001 ·</text>
+<text x="24" y="200.8" class="l" style="animation-delay:1.14s"></text>
+<text x="114.0" y="200.8" class="l" style="animation-delay:1.14s" fill="#181c22">XDR-EDR-SIEM on-premise · architecture</text>
+<text x="24" y="217.8" class="l" style="animation-delay:1.26s"></text>
+<text x="114.0" y="217.8" class="l" style="animation-delay:1.26s" fill="#181c22">réseau</text>
+<text x="24" y="239.8" class="l" style="animation-delay:1.38s"><tspan fill="#17a08a" font-weight="700">Livré</tspan></text>
+<text x="114.0" y="239.8" class="l" style="animation-delay:1.38s" fill="#181c22">Déploiement Wazuh &amp; Bitdefender ·</text>
+<text x="24" y="256.8" class="l" style="animation-delay:1.50s"></text>
+<text x="114.0" y="256.8" class="l" style="animation-delay:1.50s" fill="#181c22">migration VPN → ZTNA ·</text>
+<text x="24" y="273.8" class="l" style="animation-delay:1.62s"></text>
+<text x="114.0" y="273.8" class="l" style="animation-delay:1.62s" fill="#181c22">micro-segmentation · durcissement</text>
+<text x="24" y="290.8" class="l" style="animation-delay:1.74s"></text>
+<text x="114.0" y="290.8" class="l" style="animation-delay:1.74s" fill="#181c22">Windows / Linux, AD, GPO</text>
+<text x="24" y="312.8" class="l" style="animation-delay:1.86s"><tspan fill="#17a08a" font-weight="700">Échelle</tspan></text>
+<text x="114.0" y="312.8" class="l" style="animation-delay:1.86s" fill="#181c22">parc de 600 utilisateurs</text>
+<text x="24" y="334.8" class="l" style="animation-delay:1.98s"><tspan fill="#17a08a" font-weight="700">Détection</tspan></text>
+<text x="114.0" y="334.8" class="l" style="animation-delay:1.98s" fill="#181c22">Wazuh · Bitdefender · Sentinel · Tehtris</text>
+<text x="24" y="356.8" class="l" style="animation-delay:2.10s"><tspan fill="#17a08a" font-weight="700">Périmètre</tspan></text>
+<text x="114.0" y="356.8" class="l" style="animation-delay:2.10s" fill="#181c22">Fortinet · pfSense · WAF · VLAN / VPN</text>
+<text x="24" y="378.8" class="l" style="animation-delay:2.22s"><tspan fill="#17a08a" font-weight="700">Automation</tspan></text>
+<text x="114.0" y="378.8" class="l" style="animation-delay:2.22s" fill="#181c22">Ansible · Jenkins · Docker · PowerShell</text>
+<text x="24" y="395.8" class="l" style="animation-delay:2.34s"></text>
+<text x="114.0" y="395.8" class="l" style="animation-delay:2.34s" fill="#181c22">· Bash</text>
+<rect x="24" y="422.8" width="22" height="12" rx="6" fill="#d4ece7" class="l" style="animation-delay:2.46s"/>
+<rect x="50" y="422.8" width="22" height="12" rx="6" fill="#2ebfa5" class="l" style="animation-delay:2.51s"/>
+<rect x="76" y="422.8" width="22" height="12" rx="6" fill="#17a08a" class="l" style="animation-delay:2.56s"/>
+<rect x="102" y="422.8" width="22" height="12" rx="6" fill="#0e8371" class="l" style="animation-delay:2.61s"/>
+<rect x="128" y="422.8" width="22" height="12" rx="6" fill="#15302b" class="l" style="animation-delay:2.66s"/>
+<rect x="154" y="422.8" width="22" height="12" rx="6" fill="#181c22" class="l" style="animation-delay:2.71s"/>
+<g class="l" style="animation-delay:2.76s"><g transform="translate(24,452.8) scale(0.1000)" fill="#15302b"><g><polygon points="0,120 52,0 68,0 120,120 90,120 60,36 30,120"/></g><g transform="translate(140,0)"><rect x="0" y="0" width="104" height="22"/><rect x="38.5" y="30" width="27" height="90"/></g><g transform="translate(268,0)"><rect x="0" y="0" width="27" height="120"/><rect x="35" y="98" width="57" height="22"/></g><g transform="translate(384,0)"><path fill-rule="evenodd" d="M52,0 C84,0 104,26 104,60 C104,94 84,120 52,120 C20,120 0,94 0,60 C0,26 20,0 52,0 Z M52,22 C33,22 27,38 27,60 C27,82 33,98 52,98 C71,98 77,82 77,60 C77,38 71,22 52,22 Z"/></g><g transform="translate(512,0)"><path d="M97,0 V22 H42 C35,22 31,26 31,33 C31,40 35,44 42,44 H62 C85,44 99,58 99,81 C99,105 85,120 60,120 H2 V98 H58 C66,98 72,92 72,82 C72,72 66,66 58,66 H40 C17,66 4,52 4,33 C4,13 18,0 42,0 Z"/></g></g><g transform="translate(94,450.8) scale(0.1250)"><g stroke="#2ebfa5" stroke-width="8" stroke-linecap="round"><line x1="39.55" y1="67.28" x2="35.17" y2="29.33"/><line x1="39.55" y1="67.28" x2="27.14" y2="103.78"/><line x1="39.55" y1="67.28" x2="89.18" y2="77.50"/></g><g fill="#2ebfa5"><circle cx="35.17" cy="29.33" r="15.33"/><circle cx="39.55" cy="67.28" r="15.33"/><circle cx="27.14" cy="103.78" r="10.22"/><circle cx="89.18" cy="77.50" r="21.90"/></g></g><text x="116" y="463.8" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace" font-size="10" fill="#5a6570">atlos.fr · hyzia.fr</text></g>
 </g>
 </svg>

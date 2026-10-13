@@ -18,9 +18,11 @@ PITCH = CELL + GAP
 LEFT = 44                    # place pour les étiquettes des jours
 TOP = 78                     # barre de titre + étiquettes des mois
 
-BG, BAR, BORDER = "#0b1214", "#111b1e", "#1c2b2f"
-ACCENT, TEXT, DIM = "#2ebfa5", "#d7ece8", "#6f8a88"
-PALETTE = ["#16231f", "#0f4f45", "#14705f", "#2ebfa5", "#7be0cc", "#c9fff3"]
+BG, BAR, BORDER = "#ffffff", "#eef4f3", "#dfe8e6"
+ACCENT, TEXT, DIM = "#17a08a", "#181c22", "#5a6570"
+PALETTE = ["#edf3f1", "#bfe6dc", "#7fd6c2", "#3ecdb8", "#17a08a", "#0e8371"]
+INK = "#15302b"
+SANS = 'Manrope,-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif'
 MONTHS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
 FONT = 'ui-monospace,SFMono-Regular,Menlo,Consolas,&quot;DejaVu Sans Mono&quot;,monospace'
 
@@ -71,11 +73,15 @@ def main():
       f'aria-label="Graphique des contributions GitHub de {user} : {st["total"]} sur la dernière année">')
     a("<style>.c{opacity:0;animation:drop .5s cubic-bezier(.2,.8,.2,1) forwards}"
       "@keyframes drop{from{opacity:0;transform:translateY(-9px)}to{opacity:1;transform:none}}</style>")
-    a(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="12" fill="{BG}" stroke="{BORDER}"/>')
-    a(f'<path d="M0.5 12.5a12 12 0 0 1 12-12h{W - 25}a12 12 0 0 1 12 12V34H0.5z" fill="{BAR}"/>')
-    a(f'<line x1="0.5" y1="34" x2="{W - 0.5}" y2="34" stroke="{BORDER}"/>')
-    a(f'<circle cx="20" cy="17.5" r="5" fill="#ff5f57"/><circle cx="38" cy="17.5" r="5" fill="#febc2e"/><circle cx="56" cy="17.5" r="5" fill="{ACCENT}"/>')
-    a(f'<text x="{W / 2:.0f}" y="21" text-anchor="middle" font-family="{FONT}" font-size="11" fill="{DIM}">{user}@github: ~/contributions</text>')
+    a(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="14" fill="{BG}" stroke="{BORDER}"/>')
+    a(f'<path d="M0.5 14.5a14 14 0 0 1 14-14h{W - 29}a14 14 0 0 1 14 14V40H0.5z" fill="{BAR}"/>')
+    a(f'<line x1="0.5" y1="40" x2="{W - 0.5}" y2="40" stroke="{BORDER}"/>')
+    a('<defs><linearGradient id="hdg" x1="0" y1="0" x2="1" y2="1">'
+      '<stop offset="0" stop-color="#3ecdb8"/><stop offset="1" stop-color="#1c8f7c"/></linearGradient></defs>')
+    a(f'<rect x="18" y="14" width="13" height="13" rx="4" fill="url(#hdg)"/>'
+      f'<path d="M22.2 20.5l1.9 1.9 3.6-4" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>')
+    a(f'<text x="40" y="24.5" font-family="{SANS}" font-size="12.5" font-weight="700" letter-spacing=".4" fill="{INK}">'
+      f'Contributions · {user}</text>')
 
     a(f'<g font-family="{FONT}" font-size="10" fill="{DIM}">')
     for wk, label in sorted(month_marks.items()):

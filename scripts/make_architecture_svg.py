@@ -7,8 +7,8 @@ Des paquets circulent en continu sur les liens : bleu-vert = trafic, ambre = log
 
 Usage : python scripts/make_architecture_svg.py  ->  architecture.svg
 """
-from theme import (ACCENT, ACCENT2, ACCENT_DEEP, BG, BG2, BORDER, DIM, MONO, SANS, TEXT, WARN,
-                   esc, panel, svg_open, text_w, window_chrome)
+from theme import (ACCENT, ACCENT2, ACCENT_DEEP, BG2, BORDER, DIM, MONO, SANS, TEXT, WARN,
+                   esc, header, panel, svg_open, text_w, TINT)
 
 OUT = "architecture.svg"
 W, H = 860, 372
@@ -60,26 +60,27 @@ def main():
     o.append("<style>.u{opacity:0;animation:up .6s cubic-bezier(.2,.8,.2,1) forwards}"
              "@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}</style>")
     o.append(panel(W, H))
-    o.append(window_chrome(W, "vulneze@github: ~/architecture"))
+    o.append(header(W, "Architecture de sécurité"))
 
     ty_mid = TOP_Y + BH // 2
     by_mid = BOT_Y + BH // 2
 
     # étiquettes de plans
-    o.append(f'<g font-family="{MONO}" font-size="9" letter-spacing="1.8" fill="{ACCENT}">'
-             f'<text class="u" style="animation-delay:.1s" x="{X1}" y="{TOP_Y - 10}">PLAN DE TRAFIC</text>'
+    o.append(f'<g font-family="{SANS}" font-size="9" font-weight="700" letter-spacing="1.8" fill="{ACCENT_DEEP}">'
+             f'<text class="u" style="animation-delay:.1s" x="{X1}" y="{TOP_Y - 10}">PLAN DE TRAFIC</text></g>'
+             f'<g font-family="{SANS}" font-size="9" font-weight="700" letter-spacing="1.8" fill="{WARN}">'
              f'<text class="u" style="animation-delay:.1s" x="{X1 + 104}" y="{BOT_Y - 10}">PLAN DE TÉLÉMÉTRIE</text></g>')
 
     # liens (dessinés avant les blocs pour que les paquets « sortent » des blocs)
     o.append("<g>")
     for xa, xb in ((X1 + BW, X2), (X2 + BW, X3), (X3 + BW, X4)):
-        o.append(arrow(xa, ty_mid, xb, ty_mid, ACCENT_DEEP))
+        o.append(arrow(xa, ty_mid, xb, ty_mid, ACCENT2))
     for xa, xb in ((X1 + BW, X2), (X2 + 350, X4)):
-        o.append(arrow(xa, by_mid, xb, by_mid, "#7a6420"))
+        o.append(arrow(xa, by_mid, xb, by_mid, WARN))
     # télémétrie descendante : chaque brique du haut alimente le plan du bas
     for xc, tgt in ((X1 + BW // 2, X1 + BW // 2), (X2 + BW // 2, X2 + BW // 2),
                     (X3 + BW // 2, X3 + BW // 2 + 20), (X4 + 121, X4 + 121)):
-        o.append(arrow(xc, TOP_Y + BH, tgt, BOT_Y, "#7a6420", dashed=True))
+        o.append(arrow(xc, TOP_Y + BH, tgt, BOT_Y, WARN, dashed=True))
     o.append("</g>")
 
     # paquets : trafic de gauche à droite, logs vers le bas, alertes vers la réponse
@@ -106,8 +107,8 @@ def main():
     for i, (n, d) in enumerate(zones):
         zy = TOP_Y + 21 + i * 17.5
         o.append(f'<rect x="{X4 + 10}" y="{zy:.1f}" width="{zw - 20}" height="15" rx="4" fill="{ACCENT}" fill-opacity=".08" stroke="{ACCENT_DEEP}" stroke-width=".8"/>'
-                 f'<text x="{X4 + 18}" y="{zy + 10.5:.1f}" font-family="{MONO}" font-size="9.5" fill="{ACCENT2}">{n}</text>'
-                 f'<text x="{X4 + 70}" y="{zy + 10.5:.1f}" font-family="{MONO}" font-size="9.5" fill="{DIM}">{esc(d)}</text>')
+                 f'<text x="{X4 + 18}" y="{zy + 10.5:.1f}" font-family="{SANS}" font-size="9.5" font-weight="700" fill="{ACCENT_DEEP}">{n}</text>'
+                 f'<text x="{X4 + 70}" y="{zy + 10.5:.1f}" font-family="{SANS}" font-size="9.5" fill="{DIM}">{esc(d)}</text>')
         if text_w(d, 9.5, True) > zw - 90:
             warnings.append(f"zone trop longue: {d}")
     o.append("</g>")
@@ -120,9 +121,9 @@ def main():
     # gouvernance
     gy = BOT_Y + BH + 24
     o.append(f'<g class="u" style="animation-delay:1.4s">'
-             f'<rect x="{X1}" y="{gy}" width="{W - 2 * X1}" height="32" rx="9" fill="none" stroke="{ACCENT_DEEP}" stroke-dasharray="5 5"/>'
-             f'<text x="{X1 + 14}" y="{gy + 20}" font-family="{MONO}" font-size="9" letter-spacing="1.8" fill="{ACCENT}">GOUVERNANCE</text>'
-             f'<text x="{X1 + 120}" y="{gy + 20}" font-family="{MONO}" font-size="10.5" fill="{TEXT}" fill-opacity=".85">'
+             f'<rect x="{X1}" y="{gy}" width="{W - 2 * X1}" height="32" rx="9" fill="{TINT}" stroke="{ACCENT2}" stroke-dasharray="5 5"/>'
+             f'<text x="{X1 + 14}" y="{gy + 20}" font-family="{SANS}" font-size="9" font-weight="700" letter-spacing="1.8" fill="{ACCENT_DEEP}">GOUVERNANCE</text>'
+             f'<text x="{X1 + 120}" y="{gy + 20}" font-family="{SANS}" font-size="10.5" fill="{TEXT}" fill-opacity=".85">'
              f'SMSI · NIS2 · ISO 27001 · gestion des vulnérabilités · audits · sauvegardes</text></g>')
     assert gy + 32 + 12 <= H, "gouvernance hors cadre"
 

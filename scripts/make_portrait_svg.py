@@ -11,8 +11,8 @@ Pré-requis : python scripts/prep_photo.py source-photo.png
 import cv2
 import numpy as np
 
-from theme import (ACCENT, ACCENT2, ACCENT_DEEP, BG, BORDER, DIM, MONO, SANS, TEXT,
-                   esc, lerp_hex, panel, svg_open, window_chrome)
+from theme import (ACCENT, ACCENT2, ACCENT_DEEP, DIM, INK, MONO, SANS, TEXT, TINT, TINT2,
+                   esc, header, lerp_hex, panel, svg_open)
 
 OUT = "portrait.svg"
 W, H = 400, 482
@@ -43,10 +43,9 @@ def load_grid():
     return g, m
 
 
-def dot_color(l):
-    if l < 0.55:
-        return lerp_hex(ACCENT_DEEP, ACCENT, l / 0.55)
-    return lerp_hex(ACCENT, "#e6fffa", (l - 0.55) / 0.45)
+def dot_color(d):
+    """d = obscurité (0 = clair, 1 = foncé) : halftone encre sur papier."""
+    return lerp_hex(TINT2, INK, d ** 1.1)
 
 
 def main():
@@ -64,19 +63,19 @@ def main():
              ".p{animation:pulse 1.8s ease-in-out infinite}</style>")
     o.append("<defs>"
              f'<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">'
-             f'<stop offset="0" stop-color="{ACCENT}" stop-opacity="0"/>'
-             f'<stop offset="0.85" stop-color="{ACCENT}" stop-opacity="0.45"/>'
-             f'<stop offset="1" stop-color="{ACCENT2}" stop-opacity="0.95"/></linearGradient>'
+             f'<stop offset="0" stop-color="{ACCENT2}" stop-opacity="0"/>'
+             f'<stop offset="0.85" stop-color="{ACCENT2}" stop-opacity="0.35"/>'
+             f'<stop offset="1" stop-color="{ACCENT2}" stop-opacity="0.8"/></linearGradient>'
              f'<radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">'
-             f'<stop offset="0" stop-color="{ACCENT}" stop-opacity="0.16"/>'
-             f'<stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/></radialGradient>'
+             f'<stop offset="0" stop-color="{TINT}"/>'
+             f'<stop offset="1" stop-color="{TINT}" stop-opacity="0"/></radialGradient>'
              "</defs>")
     o.append(panel(W, H))
-    o.append(f'<rect x="1" y="35" width="{W - 2}" height="{H - 36}" rx="11" fill="url(#glow)"/>')
-    o.append(window_chrome(W, "vulneze@github: ~/identity"))
+    o.append(f'<rect x="1" y="41" width="{W - 2}" height="{H - 42}" rx="13" fill="url(#glow)"/>')
+    o.append(header(W, "Identité"))
 
     # trame de fond discrète
-    o.append(f'<g fill="{BORDER}">')
+    o.append(f'<g fill="{TINT2}">')
     for gy in range(int(GY), int(GY + grid_h) + 1, 32):
         for gx in range(int(GX), int(GX + GRID) + 1, 32):
             o.append(f'<circle cx="{gx}" cy="{gy}" r="0.9"/>')
@@ -88,12 +87,12 @@ def main():
         for c in range(COLS):
             if m[r, c] < 0.4:
                 continue
-            l = float(g[r, c])
-            rad = PITCH * 0.5 * (0.12 + 0.88 * l ** 1.05)
+            d = 1.0 - float(g[r, c])
+            rad = PITCH * 0.5 * (0.12 + 0.88 * d ** 1.05)
             if rad < 0.4:
                 continue
             dots.append(f'<circle cx="{GX + (c + 0.5) * PITCH:.1f}" cy="{GY + (r + 0.5) * PITCH:.1f}" '
-                        f'r="{rad:.2f}" fill="{dot_color(l)}"/>')
+                        f'r="{rad:.2f}" fill="{dot_color(d)}"/>')
         if dots:
             delay = t0 + (r / rows) * total
             o.append(f'<g class="r" style="animation-delay:{delay:.2f}s">{"".join(dots)}</g>')
@@ -111,20 +110,20 @@ def main():
     # repères d'angle (HUD)
     L, T, R, B = GX - 10, GY - 8, GX + GRID + 10, GY + grid_h + 8
     k = 16
-    o.append(f'<g fill="none" stroke="{ACCENT}" stroke-width="1.6" stroke-linecap="round" class="fade" style="animation-delay:.2s">'
+    o.append(f'<g fill="none" stroke="{ACCENT2}" stroke-width="1.6" stroke-linecap="round" class="fade" style="animation-delay:.2s">'
              f'<path d="M{L} {T + k}V{T}H{L + k}"/><path d="M{R - k} {T}H{R}V{T + k}"/>'
              f'<path d="M{L} {B - k}V{B}H{L + k}"/><path d="M{R - k} {B}H{R}V{B - k}"/></g>')
-    o.append(f'<g font-family="{MONO}" font-size="9" fill="{ACCENT}" class="fade" style="animation-delay:.6s" letter-spacing="1.2">'
+    o.append(f'<g font-family="{MONO}" font-size="9" fill="{ACCENT_DEEP}" class="fade" style="animation-delay:.6s" letter-spacing="1.2">'
              f'<text x="{L + 6}" y="{T + 14}">ID // B.ROUAULT</text>'
              f'<text x="{R - 6}" y="{T + 14}" text-anchor="end">SEC-OPS</text></g>')
 
     # légende
     y0 = B + 30
     o.append(f'<g class="fade" style="animation-delay:{t0 + total * 0.6:.2f}s">'
-             f'<text x="{GX}" y="{y0}" font-family="{SANS}" font-size="19" font-weight="700" fill="{TEXT}">Baptiste Rouault</text>'
-             f'<text x="{GX}" y="{y0 + 18}" font-family="{MONO}" font-size="10.5" fill="{DIM}">RSSI adjoint · Architecte réseaux &amp; cybersécurité</text>'
-             f'<circle class="p" cx="{R - 62}" cy="{y0 - 6}" r="3.2" fill="{ACCENT}"/>'
-             f'<text x="{R - 54}" y="{y0 - 2.5}" font-family="{MONO}" font-size="10" fill="{ACCENT}">vulneze</text></g>')
+             f'<text x="{GX}" y="{y0}" font-family="{SANS}" font-size="19" font-weight="800" fill="{TEXT}">Baptiste Rouault</text>'
+             f'<text x="{GX}" y="{y0 + 18}" font-family="{SANS}" font-size="10.5" fill="{DIM}">RSSI adjoint · Architecte réseaux &amp; cybersécurité</text>'
+             f'<circle class="p" cx="{R - 62}" cy="{y0 - 6}" r="3.2" fill="{ACCENT2}"/>'
+             f'<text x="{R - 54}" y="{y0 - 2.5}" font-family="{SANS}" font-size="10" font-weight="700" fill="{ACCENT_DEEP}">vulneze</text></g>')
     o.append("</svg>")
 
     with open(OUT, "w", encoding="utf-8") as f:
