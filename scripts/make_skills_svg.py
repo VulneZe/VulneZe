@@ -18,11 +18,11 @@ TOP = 50
 
 DOMAINS = [
     ("Détection & réponse", "télémétrie · corrélation · enquête", "eye",
-     ["Wazuh", "Bitdefender", "Microsoft Defender", "Sentinel", "Tehtris", "CrowdStrike",
-      "Sysmon", "Event Viewer", "SIEM", "XDR / EDR"]),
+     ["SIEM", "XDR", "EDR", "IDS / IPS", "SOAR", "Sysmon", "Threat hunting",
+      "Corrélation", "Forensics"]),
     ("Réseau & périmètre", "segmenter · filtrer · protéger", "share",
-     ["Fortinet", "pfSense", "NGFW", "WAF", "Proxy sécurisé", "IDS / IPS", "VLAN", "VPN",
-      "Routage", "ZTNA / SASE", "Micro-segmentation"]),
+     ["NGFW", "WAF", "Proxy sécurisé", "IDS / IPS", "VLAN", "VPN", "Routage",
+      "ZTNA / SASE", "Micro-segmentation", "NAC"]),
     ("Identités & accès", "qui accède à quoi, et comment", "key",
      ["Active Directory", "GPO", "IAM", "MFA", "PAM", "RADIUS", "IdP", "Samba AD",
       "PKI / X.509", "YubiKey", "MDM", "DLP"]),
@@ -30,10 +30,11 @@ DOMAINS = [
      ["Azure", "Microsoft 365", "AWS ECS Fargate", "ELB", "S3", "Proxmox", "VMware",
       "Hyper-V", "Windows", "Linux", "SAN / NAS"]),
     ("Automatisation & CI/CD", "industrialiser · reproduire", "import",
-     ["Ansible", "Kubernetes", "Docker", "Jenkins", "Gitea", "PowerShell", "Bash", "Infra as Code"]),
+     ["Ansible", "Terraform", "Kubernetes", "Docker", "CI/CD", "PowerShell", "Bash",
+      "Infra as Code", "GitOps"]),
     ("Gouvernance & conformité", "cadrer · mesurer · auditer", "shield",
      ["SMSI", "NIS2", "ISO 27001", "Gestion des vulnérabilités", "Audit", "Supervision",
-      "Centreon", "Grafana", "Sensibilisation"]),
+      "Métrologie", "KPI sécurité", "Sensibilisation"]),
 ]
 
 

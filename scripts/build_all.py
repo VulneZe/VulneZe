@@ -17,7 +17,7 @@ STEPS = [
     "make_banner_svg",
     "make_portrait_svg",
     "make_info_card",
-    "make_architecture_svg",
+    "make_projects_svg",
     "make_skills_svg",
     "render_heatmap_svg",   # nécessite data/contributions.json (workflow quotidien)
 ]

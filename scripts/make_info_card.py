@@ -9,7 +9,7 @@ import os
 import textwrap
 
 from theme import (ACCENT, ACCENT2, ACCENT_DEEP, BORDER, DIM, INK, MONO, TEXT, TINT, TINT2,
-                   esc, icon_atlos, panel, svg_open, header, atlos_logo, hyzia_logo)
+                   esc, icon_atlos, panel, svg_open, header)
 
 OUT = "info-card.svg"
 STATIC = os.environ.get("STATIC") == "1"
@@ -25,12 +25,11 @@ WRAP = 40
 FIELDS = [
     ("Rôle", "RSSI adjoint · Architecte réseaux & cybersécurité"),
     ("Focus", "Défense en profondeur · Zero Trust · détection & réponse"),
-    ("En cours", "SMSI & conformité NIS2 / ISO 27001 · XDR-EDR-SIEM on-premise · architecture réseau"),
-    ("Livré", "Déploiement Wazuh & Bitdefender · migration VPN → ZTNA · micro-segmentation · durcissement Windows / Linux, AD, GPO"),
-    ("Échelle", "parc de 600 utilisateurs"),
-    ("Détection", "Wazuh · Bitdefender · Sentinel · Tehtris"),
-    ("Périmètre", "Fortinet · pfSense · WAF · VLAN / VPN"),
-    ("Automation", "Ansible · Jenkins · Docker · PowerShell · Bash"),
+    ("En cours", "SMSI & conformité NIS2 / ISO 27001 · SIEM / XDR on-premise"),
+    ("Livré", "Déploiement SIEM / EDR · migration VPN → ZTNA · micro-segmentation · durcissement Windows / Linux, AD, GPO"),
+    ("Détection", "SIEM · XDR · EDR · IDS / IPS"),
+    ("Périmètre", "NGFW · WAF · VPN / ZTNA · micro-segmentation"),
+    ("Automation", "Ansible · Terraform · Docker · CI/CD · PowerShell · Bash"),
 ]
 
 PALETTE = [TINT2, ACCENT2, ACCENT, ACCENT_DEEP, INK, TEXT]
@@ -47,8 +46,7 @@ def main():
         return "" if STATIC else f' class="l" style="animation-delay:{d:.2f}s"'
 
     y, delay, step = 72, 0.3, 0.12
-    body = [f'<text x="{X0}" y="{y}"{a(delay)} font-size="{FONT + 3.5}" font-weight="800">'
-            f'<tspan fill="{INK}">vulneze</tspan><tspan fill="{DIM}"> · </tspan><tspan fill="{ACCENT}">atlos</tspan></text>']
+    body = [f'<text x="{X0}" y="{y}"{a(delay)} font-size="{FONT + 3.5}" font-weight="800" fill="{INK}">vulneze</text>']
     y += 10
     delay += step
     body.append(f'<rect x="{X0}" y="{y:.0f}" width="{W - 2 * X0}" height="1" fill="{BORDER}"{a(delay)}/>')
@@ -70,17 +68,13 @@ def main():
     y += 10
     for i, c in enumerate(PALETTE):
         body.append(f'<rect x="{X0 + i * 26}" y="{y:.1f}" width="22" height="12" rx="6" fill="{c}"{a(delay + i * 0.05)}/>')
-    y += 30
-    body.append(f'<g{a(delay + 0.3)}>{atlos_logo(X0, y, 12)}'
-                f'{hyzia_logo(X0 + 70, y - 2, 16)}'
-                f'<text x="{X0 + 92}" y="{y + 11}" font-family="{MONO}" font-size="10" fill="{DIM}">atlos.fr · hyzia.fr</text></g>')
     y += 12
     assert y + 8 < H, f"contenu trop long pour la carte ({y:.0f} > {H})"
 
     css = "" if STATIC else (
         "<style>.l{opacity:0;animation:in .45s ease-out forwards}"
         "@keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}</style>")
-    svg = [svg_open(W, H, "Carte de profil de Baptiste Rouault : rôle, périmètre, réalisations"), css,
+    svg = [svg_open(W, H, "Carte de profil de vulneze : rôle, périmètre, réalisations"), css,
            panel(W, H), header(W, "Profil"),
            f'<g font-family="{MONO}" font-size="{FONT}" xml:space="preserve">', *body, "</g>", "</svg>"]
     with open(OUT, "w", encoding="utf-8") as f:
