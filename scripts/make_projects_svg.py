@@ -20,10 +20,14 @@ CARD_H = 128
 PROJECTS = [
     ("Hydia", "Coffre-fort numérique zero-knowledge : secrets, documents, partage d'équipe.",
      ["TypeScript", "Fastify", "Supabase", "E2EE"], "lock"),
+    ("Lab Entreprise", "Maquette d'entreprise complète : routage, VPN, AD, PKI / AD CS, durcissement.",
+     ["AD DS / AD CS", "PKI", "Routage & VPN", "GPO"], "share"),
     ("atlos.fr", "Site vitrine Atlos : offres cyber & réseau pour les TPE.",
      ["React", "Vite", "Tailwind"], "globe"),
+    ("NetRecon", "Cartographie réseau discrète : découverte passive, sans alerte côté AD.",
+     ["Python", "Scan passif", "ARP / mDNS", "AD-aware"], "eye"),
     ("CVEAtlos", "Veille et scoring de vulnérabilités orienté exploitation.",
-     ["Next.js", "Rust"], "eye"),
+     ["Next.js", "Rust"], "score"),
     ("Hydia BackOffice", "Back-office multi-tenant : organisations, modules de formation, Edge Functions.",
      ["React", "Supabase", "Deno"], "folder"),
 ]
@@ -32,7 +36,9 @@ LANG_COLORS = {
     "TypeScript": "#3178c6", "Rust": "#b7410e", "React": "#149eca",
     "Vite": "#8b5cf6", "Tailwind": "#38bdf8", "Fastify": "#181c22",
     "Supabase": "#3ecf8e", "Deno": "#181c22", "Next.js": "#181c22",
-    "E2EE": ACCENT_DEEP,
+    "E2EE": ACCENT_DEEP, "Python": "#3572a5", "AD DS / AD CS": "#3178c6",
+    "PKI": "#8b5cf6", "Routage & VPN": "#149eca", "GPO": "#3178c6",
+    "Scan passif": ACCENT_DEEP, "ARP / mDNS": "#38bdf8", "AD-aware": "#b7410e",
 }
 
 
